@@ -1,0 +1,223 @@
+/* Estilos para html */
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url(../data/fonts/montserrat/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: bold;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/fonts/montserrat/Montserrat-Medium.ttf);
+    font-weight: 700;
+    font-style:normal;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/fonts/montserrat/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style:normal;
+  }
+  @font-face {
+    font-family: 'montserrat';
+    src: url(../data/fonts/montserrat/Montserrat-SemiBold.ttf);
+    font-weight: 800;
+    font-style:normal;
+  }
+  @font-face{
+    font-family: 'montserrat';
+    src: url(../data/fonts/montserrat/Montserrat-Italic.ttf);
+    font-weight:400;
+    font-style: italic; 
+  }
+
+
+body{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-rows: 100px 1fr 1fr 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+    background-color: #1a2c32;
+    }
+
+header{ 
+    display: grid;
+    grid-area: 2 / 1 / 2 / 8;
+    align-items: center;
+    width: 100%;
+    grid-template-columns: 400px 1fr;
+}
+.contenedorLogo{
+    grid-area: 1/1/2/2;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.titulo{
+    grid-area: 1/1/1/8;
+
+}
+.titulo h1{
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: rgb(255, 255, 255,0.3) solid 3px;
+
+}
+.contenedorLogo h2{
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+ 
+}
+.logo{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+
+}
+nav{
+    grid-area: 1 / 2 / 2 / 6;
+    display: flex;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    padding: 5px;   
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+nav ul li{
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    color: white;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    padding: 20px;
+
+}
+
+nav ul li a:hover{
+ 
+    animation:llenar 1s linear forwards ;
+
+}
+@keyframes llenar {
+    0%{
+        background-color: rgb(59, 117, 127,0.0);
+        border: rgb(255, 255, 255,0.0) solid 1px;
+
+    }
+    50%{
+        background-color: rgb(59, 117, 127,0.3);
+        border: rgb(255, 255, 255,0.5) solid 1px;
+
+    }
+    100%{
+        background-color: rgb(59, 117, 127,1);
+        border: rgb(255, 255, 255,0.2) solid 1px;
+
+
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+main{
+        grid-area: 3 / 1 / 5 / 8;
+    }
+
+
+main aside{
+    display: flex;
+    background-color: rgb(95, 170, 177,0.3);
+    position: sticky;
+    top: 0;
+}
+main aside ul{
+    display: flex;
+    list-style: none;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+aside ul li{
+    padding: 10px;
+    margin: 10px;
+    width: 100%;
+    color: white;
+}
+aside ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    padding: 20px;
+    --c:linear-gradient(#ffffff 0 0);
+    padding-top: 1.50em ;
+    padding-bottom: .25em;
+    background: var(--c), var(--c);
+    background-size: .3em .1em;
+    background-position:50% 100%;
+    background-repeat: no-repeat;
+    transition: .3s linear, background-size .3s .2s linear;
+}
+
+aside ul li a:hover{
+    background-size: 100% .1em;
+    background-position: 50% 50%, 5% 100%;
+}
+footer{
+        grid-area: 5 / 1 / 6 / 6; 
+    }
+
+
+
+
+
+
+
+
+/*
+'blue-chill': {
+        '50': '#f2f9f9',
+        '100': '#ddeff0',
+        '200': '#bfe0e2',
+        '300': '#92cace',
+        '400': '#5faab1',
+        '500': '#438e96',
+        '600': '#3b757f',
+        '700': '#356169',
+        '800': '#325158',
+        '900': '#2d464c',
+        '950': '#1a2c32',
+    },
+    
+*/
