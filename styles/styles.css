@@ -38,10 +38,11 @@ html{
 body{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-    grid-template-rows: 100px 1fr 1fr 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 30px;
     background-color: #1a2c32;
+    justify-content: center;
+
     }
 
 header{ 
@@ -49,19 +50,15 @@ header{
     grid-area: 2 / 1 / 2 / 8;
     align-items: center;
     width: 100%;
-    grid-template-columns: 400px 1fr;
 }
 .contenedorLogo{
     grid-area: 1/1/2/2;
-    display: flex;
-    width: 100%;
-    flex-direction: column;
     text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 .titulo{
     grid-area: 1/1/1/8;
+    display: flex;
+    flex-direction: column;
 
 }
 .titulo h1{
@@ -71,16 +68,19 @@ header{
     font-style: normal;
     color: white;
     text-align: center;
-    padding: 20px;
-    border-bottom: rgb(255, 255, 255,0.3) solid 3px;
+    margin-bottom: 0;
 
 }
-.contenedorLogo h2{
+.titulo h2{
     font-family: 'Montserrat';
     font-size: 20px;
     font-weight: 400;
     font-style: italic;
     color: white;
+    border-bottom: rgb(255, 255, 255,0.3) solid 3px;
+    text-align: center;
+    padding: 20px;
+
  
 }
 .logo{
@@ -107,7 +107,6 @@ nav ul{
 nav ul li{
     padding: 10px;
     margin: 10px;
-    width: 100%;
     color: white;
 }
 
@@ -171,7 +170,6 @@ main aside ul{
 aside ul li{
     padding: 10px;
     margin: 10px;
-    width: 100%;
     color: white;
 }
 aside ul li a{
@@ -194,9 +192,45 @@ aside ul li a:hover{
     background-size: 100% .1em;
     background-position: 50% 50%, 5% 100%;
 }
+
+.contenedorNoticias{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px; 
+}
+
+.tipo1 { grid-area: 1 / 1 / 3 / 4; }
+.tipo2 { grid-area: 1 / 4 / 3 / 6; }
+.tipo3 { grid-area: 3 / 1 / 5 / 3; }
+.div4 { grid-area: 3 / 4 / 5 / 6; }
+.div5 { grid-area: 5 / 1 / 7 / 2; }
+.div6 { grid-area: 5 / 2 / 7 / 4; }
+.div7 { grid-area: 5 / 4 / 7 / 6; } 
+
+
+
+
 footer{
-        grid-area: 5 / 1 / 6 / 6; 
+        grid-area: 5 / 1 / 6 / 8;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
     }
+
+footer *{
+    font-family: 'montserrat';
+    font-weight: normal;
+    font-style:normal;
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
 
 
 
