@@ -1,84 +1,53 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Hamiti News</title>
+    <title>Sobre Nosotros</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./data/img/fovicon.png" type="image/x-icon">
 </head>
 <body>
-
     <header>
         <a href="./index.html"><img src="./data/img/logo.png" alt="logo de la empresa" class="logo"></a>
         <nav>
-            <ul class="url">
+            <ul>
                 <li><input type="text" class="busqueda" placeholder="Realice su busqueda"></li>
                 <li><a href="./index.html">Pagina principal</a></li>
                 <li><a href="./sobreNosotros.html">Sobre nosotros</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./ubicacion.html">Ubicación</a></li>
             </ul>
-            <ul class="icons">
-                <li><input type="text" class="busqueda" placeholder="Realice su busqueda"></li>
-                <li><a href="./index.html"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Home"><path d="M21 19v-6.733a4 4 0 0 0-1.245-2.9L13.378 3.31a2 2 0 0 0-2.755 0L4.245 9.367A4 4 0 0 0 3 12.267V19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z"/></svg></a></li>
-                <li><a href="./sobreNosotros.html"></a></li>
-                <li><a href="./contacto.html"></a></li>
-                <li><a href="./ubicacion.html"></a></li>
-            </ul>
-
         </nav>
     </header>
 
-
-
     <main>
-        <aside>
-            <ul>
-                <li><a href="#">Ciberseguridad</a></li>
-                <li><a href="#">Tecnologia</a></li>
-                <li><a href="#">IA</a></li>
-                <li><a href="#">Hardware</a></li>
-                <li><a href="#">Sofware</a></li>
-                <li><a href="#">Entretenimiento</a></li>
-            </ul>
-        </aside>
-        <div class="contenedorNoticias">
-            <article class="articulo tipo1">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Contenido noticia</p>
-            </article>
-            <article class="articulo tipo2">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
-            <article class="articulo tipo3">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
-            <article class="articulo tipo4">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
-            <article class="articulo tipo5">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
-            <article class="articulo tipo6">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
-            <article class="articulo tipo7">
-                <h1 class="tituloArticulo">Titulo noticia</h1>
-                <h5 class="subtitulo">Tipo de articulo y fecha</h5>
-                <p class="contenidoArticulo">Noticia entera</p>
-            </article>
+        <div class="contenedorAbout">
+            <div class="infoEmpresa">
+                <h1>Nuestra empresa</h1>
+                <p>
+                    ¡Bienvenidos a nuestra empresa de noticias informáticas líder en el mercado! En el corazón de nuestra misión está el compromiso de proporcionar a nuestros clientes la información más actualizada, confiable y relevante en el mundo de la tecnología. Somos más que una simple fuente de noticias; somos su socio confiable en el vasto y cambiante paisaje tecnológico.
+                </p>
+                <h1>Equipo</h1>
+                <p>
+                    Nuestra empresa esta formada por diferentes departamentos: <br>
+                    - Departamento de redes: 
+                </p>
+            </div>
+
+            <div class="serviciosEmpresa">
+                <h1>Servicios que ofrecemos</h1>
+                <p>
+                    Nuestros servicios abarcan una amplia gama de plataformas para satisfacer las necesidades de nuestros diversos clientes. En primer lugar, ofrecemos un portal de noticias en línea que presenta artículos detallados, análisis profundos y entrevistas exclusivas con los líderes de la industria. Aquí, puede explorar las tendencias emergentes, descubrir nuevas innovaciones y mantenerse al día con los desarrollos más recientes en el mundo de la tecnología.
+                    Además de nuestro portal en línea, también ofrecemos boletines informativos por correo electrónico, entregando directamente las noticias más importantes a su bandeja de entrada. Estos boletines están diseñados para ser concisos y accesibles, brindándole información esencial de manera rápida y conveniente.
+                </p>
+                <div class="contenedorNewsletter">
+                    <h2>Para inscribirse en nuestra newsletter: </h2>
+                    <form action="./htchamiti/newsletterPost.php" method="post">
+                        <input type="text" name="correo" id="inputCorreo" placeholder="Introduzca su correo">
+                    </form>
+                </div>
+
+            </div>
         </div>
 
     </main>
