@@ -327,7 +327,7 @@ html{
 
 body{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: auto;
     grid-column-gap: 0px;
     grid-row-gap: 30px;
@@ -433,7 +433,7 @@ main{
 main aside{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 170, 177,0.3);
+    background-color: rgb(95, 170, 177);
     position: sticky;
     top: 0;
 }
@@ -475,16 +475,17 @@ aside ul li a:hover{
 
 .contenedorNoticias{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-template-rows: auto;
     grid-column-gap: 15px;
-    grid-row-gap: 10px;
+    grid-row-gap: 20px;
     margin: 40px 0px;
 }
 
 .articulo{
     border-left: #ffffff 2px solid;
-    padding: 10px;
+    min-width: 300px;
+    max-width: 500px;
 }
 .articulo h1{
     font-family: 'montserrat';
@@ -492,7 +493,6 @@ aside ul li a:hover{
     font-style: bold;
     font-size: 30px;
     color: #ffffff;
-    margin: 0;
 }
 .articulo h5{
     font-family: 'montserrat';
@@ -511,12 +511,15 @@ aside ul li a:hover{
     line-height: 25px;
 }
 
+.articulo *{
+    margin: 10px;
+}
+
 .contenedorAbout{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
     grid-template-rows: 1fr;
     grid-column-gap: 15px;
-    margin: 20px 10em;
 }
 
 .contenedorAbout *{
