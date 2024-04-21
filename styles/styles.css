@@ -36,7 +36,8 @@ html{
 
 /*
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px)
+ {
     body{
         display: grid;
         grid-column-gap: 0px;
@@ -433,7 +434,7 @@ main{
 main aside{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 170, 177);
+    background-color: rgb(95, 170, 177,0.5);
     position: sticky;
     top: 0;
 }
@@ -472,6 +473,11 @@ aside ul li a:hover{
     background-size: 100% .1em;
     background-position: 50% 50%, 5% 100%;
 }
+
+.scrolled{
+    background-color:rgb(95, 170, 177);
+}
+
 
 .contenedorNoticias{
     display: grid;
