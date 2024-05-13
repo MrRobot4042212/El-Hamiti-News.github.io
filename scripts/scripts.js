@@ -3,13 +3,81 @@ $(window).scroll(function() {
         hH = $('#generos').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-    console.log((hT - wH), wS);
+        let footerMain = document.querySelector('.urlFooter');
+        let navHamburger = document.querySelector('.navHamburger');
+        let navBarra = document.getElementById("barraGeneros")
     if (wS > (hT + hH - wH)) {
         $('#generos').addClass('scrolled');
+        footerMain.classList.add('headerBottom')
+
     } else {
         $('#generos').removeClass('scrolled');
+        footerMain.classList.remove('headerBottom')
+
+
     }
     if (wS <= 200) {
         $('#generos').removeClass('scrolled');
+        footerMain.classList.remove('headerBottom')
+
+
+
+
     }
 });
+
+
+
+let inputFiltroGenero = document.querySelectorAll(".genero");
+  
+inputFiltroGenero.forEach(function (inputGen) {
+  inputGen.addEventListener('click', function () {
+    let inputGenValue = inputGen.innerHTML;
+    let articulo = document.querySelectorAll(".articulo");
+    articulo.forEach(function (filtradoGen){
+      let articuloGenero = filtradoGen.querySelector(".subtitulo");
+      if (articuloGenero) {
+        articuloGenero = articuloGenero.innerHTML;
+        let belongsToGenre = articuloGenero.includes(inputGenValue);
+        console.log(belongsToGenre);
+        if (belongsToGenre) {
+          filtradoGen.style.display = "block";
+        }
+        else if (inputGenValue === "Todos" || inputGenValue === "All"){
+          filtradoGen.style.display = "block";
+        }
+        else {
+          filtradoGen.style.display = "none";
+        }
+      }
+    });
+  });
+});
+
+let tituloNoticia = document.querySelectorAll(".tituloArticulo");
+let inputFiltroNoticia = document.querySelectorAll(".inputTitulo");
+
+inputFiltroNoticia.forEach(function (inputF) {
+  inputF.addEventListener('keydown', function () {
+
+    let inputValue = inputF.value.toLowerCase();
+    if (inputValue === ""){
+      tituloNoticia.forEach(function (filtrado) {
+        filtrado.style.display = "block";
+      });
+    }
+
+    let articulo = document.querySelectorAll(".articulo");
+    articulo.forEach(function (filtrado) {
+      let tituloValue  = filtrado.querySelector(".tituloArticulo").innerHTML.toLowerCase();
+      if (tituloValue.includes(inputValue)) {
+        filtrado.style.display = "block";
+      } else {
+        filtrado.style.display = "none";
+      }
+    });
+  });
+});
+
+
+

@@ -6,6 +6,7 @@ $result = $con -> query($consulta);
 
 $consulta2 = "SELECT * FROM Secciones";
 $result2 = $con -> query($consulta2);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
