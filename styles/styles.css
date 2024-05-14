@@ -80,6 +80,7 @@ header{
     bottom: 0;
     background-color: rgb(59, 117, 127,1);
     left: 0;
+    right: 0;
 }
 
 header .icons{
@@ -224,9 +225,6 @@ aside ul li a:hover{
 }
 
 
-.navBarraDesaparecer{
-    animation: ;
-}
 
 @keyframes desaparecer {
     0%{
