@@ -1,29 +1,32 @@
+let footerMain = document.querySelector('.urlFooter');
+
 $(window).scroll(function() {
     var hT = $('#generos').offset().top,
         hH = $('#generos').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        let footerMain = document.querySelector('.urlFooter');
         let navHamburger = document.querySelector('.navHamburger');
         let navBarra = document.getElementById("barraGeneros")
+        console.log((hT - wH), wS);
+
+
     if (wS > (hT + hH - wH)) {
         $('#generos').addClass('scrolled');
         footerMain.classList.add('headerBottom')
+
 
     } else {
         $('#generos').removeClass('scrolled');
         footerMain.classList.remove('headerBottom')
 
 
+ 
     }
     if (wS <= 200) {
         $('#generos').removeClass('scrolled');
         footerMain.classList.remove('headerBottom')
-
-
-
-
     }
+
 });
 
 
@@ -78,6 +81,29 @@ inputFiltroNoticia.forEach(function (inputF) {
     });
   });
 });
+
+
+function elementoEnElFinalDelScroll(elemento) {
+  let scrollTotal = document.documentElement.scrollHeight;
+  let scrollActual = window.scrollY + window.innerHeight;
+  let elementoPosicion = elemento.offsetTop + elemento.offsetHeight;
+  if (scrollActual >= scrollTotal && elementoPosicion <= scrollTotal) {
+      return true;
+  } else {
+      return false;
+  }
+}
+
+window.addEventListener('scroll', function() {
+  if (elementoEnElFinalDelScroll(footerMain)) {
+    footerMain.style.display = "none";
+  }
+  else {
+    footerMain.style.display = "flex";
+  }
+});
+
+
 
 
 
