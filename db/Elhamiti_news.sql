@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 DROP DATABASE IF EXISTS elhamiti_news;
 Create Database elhamiti_news;
 Use elhamiti_news;
@@ -32,4 +30,3 @@ Create Table Noticias (
 
 
 
->>>>>>> refs/remotes/origin/main

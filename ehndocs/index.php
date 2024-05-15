@@ -20,12 +20,12 @@ $result2 = $con -> query($consulta2);
 <body>
 
 <header id="header">
-        <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
+        <a href="../index.html" class="logo"><img src="../data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
                 <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
-                <li><a href="./index.html">Pagina principal</a></li>
-                <li><a href="./sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="../index.html">Pagina principal</a></li>
+                <li><a href="../sobreNosotros.html">Sobre nosotros</a></li>
             </ul>
         </nav>
     </header>
@@ -63,7 +63,7 @@ $result2 = $con -> query($consulta2);
                         <ul id="menu">
                             <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                             <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
-                            <li><a href="./sobreNosotros.html">Sobre nosotros</a></li>
+                            <li><a href="../sobreNosotros.html">Sobre nosotros</a></li>
                     </div>
                 </div>
 
@@ -162,8 +162,8 @@ $result2 = $con -> query($consulta2);
         </aside>
     </footer>
 
-    <script src="./scripts/jquery-3.7.1.min.js"></script>
-    <script src="./scripts/scripts.js"></script>
+    <script src=".,/scripts/jquery-3.7.1.min.js"></script>
+    <script src="../scripts/scripts.js"></script>
     
 </body>
 
