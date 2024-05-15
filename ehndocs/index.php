@@ -35,7 +35,7 @@ $result2 = $con -> query($consulta2);
             <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
-                    echo  "<li><a class='genero' href =''>".$row2['Seccion_noticia']."</a></li>";
+                    echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
                 }
                 ?>
             </ul>
@@ -45,14 +45,15 @@ $result2 = $con -> query($consulta2);
             <?php 
             while ($row = $result ->  fetch_assoc()) {
                 echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
+                echo '<div>'
                 echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
                 echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . '</h5>';
                 echo '<p class="contenidoArticulo">' . $row['Contenido_noticia'] .  '</p>';
+                echo '</div>'
                 echo '</article>';
             }
             ?>
         </div>
-        <nav>
         <nav>
             <ul class="urlFooter">
                 <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
