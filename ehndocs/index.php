@@ -45,11 +45,11 @@ $result2 = $con -> query($consulta2);
             <?php 
             while ($row = $result ->  fetch_assoc()) {
                 echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
-                echo '<div>'
+                echo '<div>';
                 echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
                 echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . '</h5>';
                 echo '<p class="contenidoArticulo">' . $row['Contenido_noticia'] .  '</p>';
-                echo '</div>'
+                echo '</div>';
                 echo '</article>';
             }
             ?>
