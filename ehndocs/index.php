@@ -32,7 +32,7 @@ $result2 = $con -> query($consulta2);
 
     <main>
         <aside id="generos" class="generos">
-            <ul id="barraGeneros">>
+            <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
                     echo  "<li><a class='genero' href =''>".$row2['Seccion_noticia']."</a></li>";
