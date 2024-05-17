@@ -9,7 +9,7 @@ Drop table IF exists Secciones;
 
 Create Table Secciones (
 ID_seccion int auto_increment primary key,
-Seccion_noticia ENUM('Ciberseguridad','Tecnologia','IA','Hardware','Software')
+Seccion_noticia ENUM('Ciberseguridad','Tecnologia','IA','Hardware','Software', 'Todos')
 );
 
 DROP table  IF EXISTS Noticias;
