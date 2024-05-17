@@ -103,7 +103,34 @@ window.addEventListener('scroll', function() {
   }
 });
 
+let selectIdioma = document.querySelector('.idiomas');
 
+selectIdioma.addEventListener('click', function(){
+
+  let containerIdiomas = document.querySelector('.contenedorIdiomas');
+
+  if (containerIdiomas.classList.contains('hidden')){
+    containerIdiomas.classList.remove('hidden');
+
+  }
+  else{
+    containerIdiomas.classList.add('hidden');
+  }
+
+});
+
+
+
+let modoClaro= document.querySelector('.lightMode');
+let modoOscuro= document.querySelector('.darkMode');
+let modoSepia= document.querySelector('.readMode');
+let contenedorModos= document.querySelector('.contenedorModosVision');
+
+contenedorModos.addEventListener('click', function(){
+
+  
+
+});
 
 
 

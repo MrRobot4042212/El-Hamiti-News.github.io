@@ -141,6 +141,56 @@ nav ul li a:hover{
     animation:llenar 1s linear forwards ;
 
 }
+
+.idiomas{
+    position: relative;
+    cursor: pointer;
+}
+
+.contenedorIdiomas{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    background-color: rgb(59, 117, 127,1);
+    padding: 0px 35px;
+
+}
+.hidden{
+    display: none;
+}
+
+.contenedorIdiomas *{
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10;
+}
+
+.modosVision{
+    cursor: pointer;
+}
+
+.contenedorModosVision{
+    position: absolute;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(59, 117, 127,1);
+    width: 20px;
+    padding: 0px 35px;
+}
+
+.contenedorModosVision *{
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 10;
+}
 @keyframes llenar {
     0%{
         background-color: rgb(59, 117, 127,0.0);
@@ -461,6 +511,7 @@ footer *{
     display: block;
     pointer-events: none;
 }
+
 
 
 
