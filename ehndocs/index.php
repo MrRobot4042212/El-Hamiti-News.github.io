@@ -59,7 +59,7 @@ $result2 = $con -> query($consulta2);
                 }
                 ?>
             </ul>
-            <p id="seleccionFiltro">fds</p>
+            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">
