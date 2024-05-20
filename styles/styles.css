@@ -78,7 +78,6 @@ header{
     position: fixed;
     z-index: 10;
     bottom: 0;
-    background-color: rgb(59, 117, 127,1);
     left: 0;
     right: 0;
 }
@@ -129,7 +128,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-family: 'Montserrat';
     font-size: 20px;
     padding: 20px;
@@ -155,7 +154,7 @@ nav ul li a:hover{
     align-items: center;
     text-align: center;
     width: 50px;
-    background-color: rgb(59, 117, 127,1);
+    background-color: rgb(59, 117, 127,0.5);
     padding: 0px 35px;
 
 }
@@ -180,7 +179,7 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(59, 117, 127,1);
+    background-color: rgb(59, 117, 127,0.5);
     width: 20px;
     padding: 0px 35px;
 }
@@ -223,7 +222,7 @@ main{
 main aside{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 170, 177,0.5);
+    background-color: rgba(95, 170, 177, 1);
     position: sticky;
     top: 0;
     z-index: 5;
@@ -429,7 +428,6 @@ aside ul li a:hover{
     color: white;
     background-color: #2d464c;
     backface-visibility: hidden;
-
 }
 
 #inputCorreo{
