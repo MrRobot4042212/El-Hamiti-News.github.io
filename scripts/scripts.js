@@ -31,6 +31,7 @@ let inputFiltroGenero = document.querySelectorAll(".genero");
 inputFiltroGenero.forEach(function (inputGen) {
   inputGen.addEventListener('click', function () {
     let inputGenValue = inputGen.innerHTML;
+    console.log(inputGenValue);
     let articulo = document.querySelectorAll(".articulo");
     articulo.forEach(function (filtradoGen){
       let articuloGenero = filtradoGen.querySelector(".subtitulo");
