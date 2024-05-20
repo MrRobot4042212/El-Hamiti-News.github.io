@@ -5,8 +5,6 @@ $(window).scroll(function() {
         hH = $('#generos').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        let navHamburger = document.querySelector('.navHamburger');
-        let navBarra = document.getElementById("barraGeneros")
         console.log((hT - wH), wS);
 
 
@@ -42,12 +40,15 @@ inputFiltroGenero.forEach(function (inputGen) {
       if (articuloGenero) {
         articuloGenero = articuloGenero.innerHTML;
         let belongsToGenre = articuloGenero.includes(inputGenValue);
-        console.log(belongsToGenre);
+        let recordatorioFiltro = document.getElementById('seleccionFiltro');
+        recordatorioFiltro.innerHTML = "Ha filtrado por: " + inputGenValue;  
+        
         if (belongsToGenre) {
           filtradoGen.style.display = "block";
         }
         else if (inputGenValue === "Todos" || inputGenValue === "All"){
           filtradoGen.style.display = "block";
+          recordatorioFiltro.innerHTML ="";
         }
         else {
           filtradoGen.style.display = "none";
@@ -124,13 +125,95 @@ selectIdioma.addEventListener('click', function(){
 let modoClaro= document.querySelector('.lightMode');
 let modoOscuro= document.querySelector('.darkMode');
 let modoSepia= document.querySelector('.readMode');
-let contenedorModos= document.querySelector('.contenedorModosVision');
+let selectModo= document.querySelector('.modosVision');
 
-contenedorModos.addEventListener('click', function(){
+selectModo.addEventListener('click', function(){
+  
+  let containerModo = document.querySelector('.contenedorModosVision');
+
+  if (containerModo.classList.contains('hidden')){
+    containerModo.classList.remove('hidden');
+  }
+  else{
+    containerModo.classList.add('hidden');
+  }
+    let seleccionModo = document.querySelectorAll('.opcionModo');
+    seleccionModo.forEach(function (seleccion){
+      seleccion.addEventListener('click', function(){
+        let modBody = document.getElementById('body');
+        let modHeader = document.getElementById('header').children;
+        let allDocument = document.getElementsByTagName("*");
+        let generosContainer = document.getElementById('generos');
+        let stopColor1 = document.getElementById('stopColor1');
+        let stopColor2 = document.getElementById('stopColor2');
+
+        if (seleccion.classList.contains('darkMode')) {
+          modBody.style.backgroundColor = "#1a2c32";
+          for (let child of modHeader) {
+            child.style.color = "#ffffff"; 
+          }
+
+          for (let link of allDocument) {
+            link.style.color = "#ffffff";
+          }
+          generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
+          stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
+          stopColor2.style.stopColor="rgb(59, 117, 127,1)"
 
   
 
-});
+        } else if (seleccion.classList.contains('lightMode')) {
+          modBody.style.backgroundColor = "#ddeff0";
+          for (let child of modHeader) {
+            child.style.color = "#1a2c32"; 
+          }
+        
+          for (let link of allDocument) {
+            link.style.color = "#1a2c32";
+          }
 
+            generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
+            stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
+            stopColor2.style.stopColor="rgb(59, 117, 127,1)"
+
+
+        } else if (seleccion.classList.contains('readMode')) {
+          modBody.style.backgroundColor = "#8c5131";
+          for (let child of modHeader) {
+            child.style.color = "#1a2c32"; 
+          }
+
+          for (let link of allDocument) {
+            link.style.color = "#e2d1a5";
+          }
+          
+          generosContainer.style.backgroundColor="#73422d"
+          stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
+          stopColor2.style.stopColor="rgb(140, 81, 49)"
+
+
+        } else {
+          modBody.style.backgroundColor = "#1a2c32";
+          for (let child of modHeader) {
+            child.style.color = "#ffffff"; 
+          }
+
+          for (let link of allDocument) {
+            link.style.color = "#ffffff";
+          }       
+          generosContainer.style.backgroundColor="#5faab180"
+          stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
+          stopColor2.style.stopColor="rgb(59, 117, 127,1)"
+        }
+        console.log(seleccion);
+        
+      });
+    });
+  });
+
+
+
+
+  
 
 

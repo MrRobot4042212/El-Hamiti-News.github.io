@@ -2,6 +2,9 @@
 html{
     scroll-behavior: smooth;
 }
+*{
+    transition: all 0.5s linear;
+}
 
 @font-face {
     font-family: 'montserrat';
@@ -78,7 +81,6 @@ header{
     position: fixed;
     z-index: 10;
     bottom: 0;
-    background-color: rgb(59, 117, 127,1);
     left: 0;
     right: 0;
 }
@@ -129,7 +131,7 @@ nav ul li{
 
 nav ul li a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
     font-family: 'Montserrat';
     font-size: 20px;
     padding: 20px;
@@ -148,14 +150,13 @@ nav ul li a:hover{
 }
 
 .contenedorIdiomas{
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
     width: 50px;
-    background-color: rgb(59, 117, 127,1);
+    background-color: rgb(59, 117, 127,0.5);
     padding: 0px 35px;
 
 }
@@ -175,14 +176,12 @@ nav ul li a:hover{
 }
 
 .contenedorModosVision{
-    position: absolute;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(59, 117, 127,1);
-    width: 20px;
-    padding: 0px 35px;
+    background-color: rgb(59, 117, 127,0.5);
+
 }
 
 .contenedorModosVision *{
@@ -223,12 +222,16 @@ main{
 main aside{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(95, 170, 177,0.5);
+    background-color: rgba(95, 170, 177, 1);
     position: sticky;
     top: 0;
     z-index: 5;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
+
 main aside ul{
     display: flex;
     flex-wrap: wrap;
@@ -268,6 +271,13 @@ aside ul li a{
 aside ul li a:hover{
     background-size: 100% .1em;
     background-position: 50% 50%, 5% 100%;
+}
+
+#seleccionFiltro{
+    font-family: 'montserrat';
+    font-weight: italic;
+    font-style: italic;
+    font-size: 15px;
 }
 
 .scrolled{
@@ -429,7 +439,6 @@ aside ul li a:hover{
     color: white;
     background-color: #2d464c;
     backface-visibility: hidden;
-
 }
 
 #inputCorreo{
@@ -478,6 +487,7 @@ footer{
         overflow: hidden;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
 footer *{
@@ -488,6 +498,21 @@ footer *{
     margin: 10px;
     text-align: center;
     color: white;
+}
+
+footer aside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+footer aside *{
+min-width: 25px;
+max-width: 30px;
+min-height: 25px;
+max-height: 30px;
 }
 
 .background {
