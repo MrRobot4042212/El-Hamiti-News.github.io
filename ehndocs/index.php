@@ -52,14 +52,15 @@ $result2 = $con -> query($consulta2);
 
     <main>
         <aside id="generos" class="generos">
-        <p id="seleccionFiltro"></p>
             <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
+                  var_dump($row2);
                     echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
                 }
                 ?>
             </ul>
+            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">
