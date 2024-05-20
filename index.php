@@ -8,20 +8,21 @@ $consulta2 = "SELECT * FROM Secciones";
 $result2 = $con -> query($consulta2);
 
 ?>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Hamiti News</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="shortcut icon" href="../data/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="shortcut icon" href="./data/img/icon.png" type="image/x-icon">
 </head>
 <body id="body">
     <header id="header">
         <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
+                <li><input style="backdrop-filter:20px ;" type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a class="optLink" href="./index.html">Pagina principal</a></li>
                 <li><a class="optLink" href="./sobreNosotros.html">Sobre nosotros</a></li>
                 <li><a class="idiomas">
@@ -58,6 +59,7 @@ $result2 = $con -> query($consulta2);
                 }
                 ?>
             </ul>
+            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">
@@ -96,11 +98,11 @@ $result2 = $con -> query($consulta2);
             >
               <defs>
                 <linearGradient id="bg" x2="0%" y2="100%">
-                  <stop
+                  <stop id="stopColor1"
                     offset="0%"
                     style="stop-color:rgb(59, 117, 127,0.3)"
                   ></stop>
-                  <stop
+                  <stop id="stopColor2"
                     offset="100%"
                     style="stop-color: rgb(59, 117, 127,1)"
                   ></stop>
@@ -173,8 +175,8 @@ $result2 = $con -> query($consulta2);
         </aside>
     </footer>
 
-    <script src="../scripts/jquery-3.7.1.min.js"></script>
-    <script src="../scripts/scripts.js"></script>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
     
 </body>
 
