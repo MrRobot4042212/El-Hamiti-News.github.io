@@ -40,12 +40,15 @@ inputFiltroGenero.forEach(function (inputGen) {
       if (articuloGenero) {
         articuloGenero = articuloGenero.innerHTML;
         let belongsToGenre = articuloGenero.includes(inputGenValue);
-        console.log(belongsToGenre);
+        let recordatorioFiltro = document.getElementById('seleccionFiltro');
+        recordatorioFiltro.innerHTML = "Ha filtrado por: " + inputGenValue;  
+        
         if (belongsToGenre) {
           filtradoGen.style.display = "block";
         }
         else if (inputGenValue === "Todos" || inputGenValue === "All"){
           filtradoGen.style.display = "block";
+          recordatorioFiltro.innerHTML ="";
         }
         else {
           filtradoGen.style.display = "none";
@@ -144,9 +147,6 @@ selectModo.addEventListener('click', function(){
         let stopColor1 = document.getElementById('stopColor1');
         let stopColor2 = document.getElementById('stopColor2');
 
-
-
-
         if (seleccion.classList.contains('darkMode')) {
           modBody.style.backgroundColor = "#1a2c32";
           for (let child of modHeader) {
@@ -210,5 +210,10 @@ selectModo.addEventListener('click', function(){
       });
     });
   });
+
+
+
+
+  
 
 

@@ -2,6 +2,9 @@
 html{
     scroll-behavior: smooth;
 }
+*{
+    transition: all 0.5s linear;
+}
 
 @font-face {
     font-family: 'montserrat';
@@ -147,7 +150,6 @@ nav ul li a:hover{
 }
 
 .contenedorIdiomas{
-    position: absolute;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -174,14 +176,12 @@ nav ul li a:hover{
 }
 
 .contenedorModosVision{
-    position: absolute;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: rgb(59, 117, 127,0.5);
-    width: 20px;
-    padding: 0px 35px;
+
 }
 
 .contenedorModosVision *{
@@ -227,7 +227,11 @@ main aside{
     top: 0;
     z-index: 5;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
 }
+
 main aside ul{
     display: flex;
     flex-wrap: wrap;
@@ -267,6 +271,13 @@ aside ul li a{
 aside ul li a:hover{
     background-size: 100% .1em;
     background-position: 50% 50%, 5% 100%;
+}
+
+#seleccionFiltro{
+    font-family: 'montserrat';
+    font-weight: italic;
+    font-style: italic;
+    font-size: 15px;
 }
 
 .scrolled{
@@ -476,6 +487,7 @@ footer{
         overflow: hidden;
         align-items: center;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
 footer *{
@@ -486,6 +498,21 @@ footer *{
     margin: 10px;
     text-align: center;
     color: white;
+}
+
+footer aside{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+
+}
+
+footer aside *{
+min-width: 25px;
+max-width: 30px;
+min-height: 25px;
+max-height: 30px;
 }
 
 .background {
