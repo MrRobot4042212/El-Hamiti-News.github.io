@@ -55,7 +55,6 @@ $result2 = $con -> query($consulta2);
             <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
-                  var_dump($row2);
                     echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
                 }
                 ?>
