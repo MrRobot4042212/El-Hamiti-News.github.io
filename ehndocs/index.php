@@ -8,6 +8,7 @@ $consulta2 = "SELECT * FROM Secciones";
 $result2 = $con -> query($consulta2);
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +22,7 @@ $result2 = $con -> query($consulta2);
         <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
+                <li><input style="backdrop-filter:20px ;" type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a class="optLink" href="./index.html">Pagina principal</a></li>
                 <li><a class="optLink" href="./sobreNosotros.html">Sobre nosotros</a></li>
                 <li><a class="idiomas">
@@ -58,6 +59,7 @@ $result2 = $con -> query($consulta2);
                 }
                 ?>
             </ul>
+            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">
@@ -77,7 +79,7 @@ $result2 = $con -> query($consulta2);
             <ul class="urlFooter">
                 <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
-                <li><a href="../sobreNosotros.html">Sobre nosotros</a></li>
+                <li><a href="/sobreNosotros.html">Sobre nosotros</a></li>
             </ul>
         </nav>
     </main>
@@ -96,11 +98,11 @@ $result2 = $con -> query($consulta2);
             >
               <defs>
                 <linearGradient id="bg" x2="0%" y2="100%">
-                  <stop
+                  <stop id="stopColor1"
                     offset="0%"
                     style="stop-color:rgb(59, 117, 127,0.3)"
                   ></stop>
-                  <stop
+                  <stop id="stopColor2"
                     offset="100%"
                     style="stop-color: rgb(59, 117, 127,1)"
                   ></stop>
@@ -173,8 +175,8 @@ $result2 = $con -> query($consulta2);
         </aside>
     </footer>
 
-    <script src="/scripts/jquery-3.7.1.min.js"></script>
-    <script src="/scripts/scripts.js"></script>
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
     
 </body>
 
