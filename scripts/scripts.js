@@ -25,7 +25,7 @@ $(window).scroll(function() {
 });
 
 
-
+document.addEventListener('DOMContentLoaded',function(){
 let inputFiltroGenero = document.querySelectorAll(".genero");
   
 inputFiltroGenero.forEach(function (inputGen) {
@@ -54,6 +54,8 @@ inputFiltroGenero.forEach(function (inputGen) {
     });
   });
 });
+
+})
 
 let tituloNoticia = document.querySelectorAll(".tituloArticulo");
 let inputFiltroNoticia = document.querySelectorAll(".inputTitulo");
