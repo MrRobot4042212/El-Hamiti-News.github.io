@@ -52,6 +52,7 @@ $result2 = $con -> query($consulta2);
 
     <main>
         <aside id="generos" class="generos">
+        <p id="seleccionFiltro"></p>
             <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
@@ -59,7 +60,6 @@ $result2 = $con -> query($consulta2);
                 }
                 ?>
             </ul>
-            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">
