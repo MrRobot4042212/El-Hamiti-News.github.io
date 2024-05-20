@@ -13,8 +13,8 @@ $result2 = $con -> query($consulta2);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Hamiti News</title>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="shortcut icon" href="../data/img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="shortcut icon" href="/data/img/icon.png" type="image/x-icon">
 </head>
 <body id="body">
     <header id="header">
@@ -173,8 +173,8 @@ $result2 = $con -> query($consulta2);
         </aside>
     </footer>
 
-    <script src="../scripts/jquery-3.7.1.min.js"></script>
-    <script src="../scripts/scripts.js"></script>
+    <script src="/scripts/jquery-3.7.1.min.js"></script>
+    <script src="/scripts/scripts.js"></script>
     
 </body>
 
