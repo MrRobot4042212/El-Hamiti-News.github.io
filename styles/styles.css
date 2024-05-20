@@ -315,7 +315,7 @@ aside ul li a:hover{
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-wrap: wrap;
 
