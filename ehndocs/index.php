@@ -8,7 +8,6 @@ $consulta2 = "SELECT * FROM Secciones";
 $result2 = $con -> query($consulta2);
 
 ?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
