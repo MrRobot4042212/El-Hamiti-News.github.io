@@ -42,10 +42,10 @@ inputFiltroGenero.forEach(function (inputGen) {
         recordatorioFiltro.innerHTML = "Ha filtrado por: " + inputGenValue;  
         
         if (belongsToGenre) {
-          filtradoGen.style.display = "block";
+          filtradoGen.style.display = "flex";
         }
         else if (inputGenValue === "Todos" || inputGenValue === "All"){
-          filtradoGen.style.display = "block";
+          filtradoGen.style.display = "flex";
           recordatorioFiltro.innerHTML ="";
         }
         else {
