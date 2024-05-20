@@ -65,7 +65,7 @@ $result2 = $con -> query($consulta2);
         <div class="contenedorNoticias">
             <?php 
             while ($row = $result ->  fetch_assoc()) {
-                echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
+                echo '<article class="articulo'.$row['ID_noticia'].'">';
                 echo '<div>';
                 echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
                 echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . '</h5>';

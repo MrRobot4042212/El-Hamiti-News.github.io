@@ -5,9 +5,6 @@ $(window).scroll(function() {
         hH = $('#generos').outerHeight(),
         wH = $(window).height(),
         wS = $(this).scrollTop();
-        console.log((hT - wH), wS);
-
-
     if (wS > (hT + hH - wH)) {
         $('#generos').addClass('scrolled');
         footerMain.classList.add('headerBottom')
