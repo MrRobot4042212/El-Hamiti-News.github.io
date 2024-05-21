@@ -8,8 +8,8 @@ $mail = new PHPMailer;
 
 $mail->IsSMTP();
 $mail->Host = '10.5.2.4'; // Servidor SMTP
-$mail->SMTPSecure = 'tls'; // Protocolo SSL o TLS
-$mail->Port = 143; // Puerto de conexión al servidor SMTP
+$mail->SMTPSecure = 'TLS'; // Protocolo SSL o TLS
+$mail->Port = 587; // Puerto de conexión al servidor SMTP
 $mail->SMTPAuth = false; // Para habilitar o deshabilitar la autenticación
 $mail->Username = 'admin@server.elhamiti.local'; // Usuario, normalmente el correo electrónico
 $mail->Password = 'admin_elhamiti'; // Tu contraseña
