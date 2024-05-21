@@ -1,5 +1,4 @@
 let footerMain = document.querySelector('.urlFooter');
-
 $(window).scroll(function() {
     var hT = $('#generos').offset().top,
         hH = $('#generos').outerHeight(),
@@ -132,6 +131,7 @@ selectIdioma.addEventListener('click', function(){
   }
 });
 
+
 let modoClaro= document.querySelector('.lightMode');
 let modoOscuro= document.querySelector('.darkMode');
 let modoSepia= document.querySelector('.readMode');
@@ -150,7 +150,7 @@ selectModo.addEventListener('click', function(){
     let seleccionModo = document.querySelectorAll('.opcionModo');
     seleccionModo.forEach(function (seleccion){
       seleccion.addEventListener('click', function(){
-        let modBody = document.getElementById('body');
+        let modBody = document.getElementById('contenido');
         let modHeader = document.querySelector('.header').children;
         let allDocument = document.getElementsByTagName("*");
         let generosContainer = document.getElementById('generos');
@@ -234,10 +234,8 @@ selectModo.addEventListener('click', function(){
   if (window.location.search.includes('lang=')) {
     document.querySelector('.lenguaje').classList.add('hidden');
     document.querySelector(".lenguaje").classList.remove('lenguaje');
-    //document.getElementById('contenido').classList.remove('hidden');
+    document.getElementById('contenido').classList.remove('hidden');
     document.querySelector('.header').classList.remove('hidden');
-    document.querySelector('.main').classList.remove('hidden');
-    document.querySelector('.footer').classList.remove('hidden');
 }
 
 window.addEventListener('beforeunload', function () {

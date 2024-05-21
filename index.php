@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require('conn.php');
@@ -36,7 +37,7 @@ if ($lang == 'en') {
 </head>
 <body>
     <main class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
-        <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa"></a>
+        <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa"></a>
         <h1>Bienvenido al noticiero "El Hamiti News"</h1>
         <h2>Por favor seleccione su idioma</h2>
         <section>
@@ -44,20 +45,24 @@ if ($lang == 'en') {
                 <li>
                     <form action="index.php" method="get">
                         <input type="hidden" name="lang" value="es">
-                        <button type="submit">Español</button>
+                        <button type="submit">Español
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/spain.png" alt="spain"/>
+                        </button>
                     </form>
                 </li>
                 <li>
                     <form action="index.php" method="get">
                         <input type="hidden" name="lang" value="en">
-                        <button type="submit">English</button>
+                        <button type="submit">English
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/great-britain.png" alt="great-britain"/>
+                        </button>
                     </form>
                 </li>
             </ul>
         </section>
     </main>
 
-    <div id="contenido">
+    <div class="hidden" id="contenido">
         <?php
         include($contenido);
         ?>

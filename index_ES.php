@@ -1,14 +1,14 @@
 <body id="body">
-    <header id="header"class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
+    <header id="header"class="header <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><input style="backdrop-filter:20px ;" type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
+                <li><input type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a class="optLink" href="./index.php">Pagina principal</a></li>
                 <li><a class="optLink" href="./aboutUs.php">Sobre nosotros</a></li>
                 <li><a class="idiomas">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Language"><path d="M14 19c3.771 0 5.657 0 6.828-1.172C22 16.657 22 14.771 22 11c0-3.771 0-5.657-1.172-6.828C19.657 3 17.771 3 14 3h-4C6.229 3 4.343 3 3.172 4.172 2 5.343 2 7.229 2 11c0 3.771 0 5.657 1.172 6.828.653.654 1.528.943 2.828 1.07"/><path d="M14 19c-1.236 0-2.598.5-3.841 1.145-1.998 1.037-2.997 1.556-3.489 1.225-.492-.33-.399-1.355-.212-3.404L6.5 17.5"/><path d="M5.5 13.5l1-2m0 0l1.106-2.211a1 1 0 0 1 1.788 0L10.5 11.5m-4 0h4m0 0l1 2m1-6h1.982V9c0 .5-.496 1.5-1.487 1.5m3.964-3v2m0 0v4m0-4H18.5"/></svg>
-                    <ul class="contenedorIdiomas">
+                    <ul class="contenedorIdiomas hidden">
                       <li>
                           <form action="index.php" method="get">
                               <input type="hidden" name="lang" value="es">
@@ -21,7 +21,8 @@
                               <button type="submit">English</button>
                           </form>
                       </li>
-                    </ul>
+                </ul>
+
                 </a></li>
                 <li><a class="modosVision">
                     <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Glasses"><circle cx="6" cy="14" r="4"/><circle cx="18" cy="14" r="4"/><path d="M10 14l.211-.106a4 4 0 0 1 3.578 0L14 14"/><path d="M19 6l2.838 6.623a2 2 0 0 1 .162.788V14"/><path d="M5 6l-2.838 6.623A2 2 0 0 0 2 13.41V14"/></svg>
@@ -40,6 +41,9 @@
             </ul>
         </nav>
     </header>
+
+
+
     <main>
         <aside id="generos" class="generos">
             <ul id="barraGeneros">
@@ -67,7 +71,7 @@
         </div>
         <nav>
             <ul class="urlFooter">
-                <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
+                <li><input type="text" id="busqueda2" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
                 <li><a href="./aboutUs.php">Sobre nosotros</a></li>
             </ul>
@@ -165,6 +169,7 @@
         </aside>
   </footer>
 
+    <script src="./scripts/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/scripts.js"></script>
 </body>
-
 </html>
