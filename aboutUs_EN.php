@@ -2,10 +2,10 @@
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><a class="optLink">
+                <li><a class="optLink">Main Page
                         <form action="./index.php" method="get">
                               <input type="hidden" name="lang" value="en">
-                              <button type="submit">Main Page</button>
+                              <button type="submit"></button>
                         </form>
                 </a></li>
                 <li><a class="optLink" href="./aboutUs.php">About Us</a></li>
