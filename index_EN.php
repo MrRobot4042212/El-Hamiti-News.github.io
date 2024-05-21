@@ -15,12 +15,12 @@
                               <button type="submit">Español</button>
                           </form>
                       </li></a>
-                      <li>
+                      <a><li>
                           <form action="index.php" method="get">
                               <input type="hidden" name="lang" value="en">
                               <button type="submit">English</button>
                           </form>
-                      </li>
+                      </li></a>
                     </ul>
                 </a></li>
                 <li><a class="modosVision">
