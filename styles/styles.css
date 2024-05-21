@@ -144,6 +144,14 @@ nav ul li a:hover{
 
 }
 
+.textButton{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    padding: 20px;
+}
+
 .idiomas{
     position: relative;
     cursor: pointer;

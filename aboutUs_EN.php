@@ -5,7 +5,7 @@
                 <li>
                         <form action="./index.php" method="get">
                               <input type="hidden" name="lang" value="en">
-                              <button type="submit">Main Page</button>
+                              <button class="textButton" type="submit">Main Page</button>
                         </form>
                 </li>
                 <li><a class="optLink" href="./aboutUs.php">About Us</a></li>
