@@ -68,7 +68,7 @@
         </div>
         <nav>
             <ul class="urlFooter">
-                <li><input type="text" id="busqueda2" class="inputTitulo busqueda" placeholder="Search the article title"></li>
+                <li><input type="text" id="busqueda2" class="inputTitulo busqueda" placeholder="Search the article tittle"></li>
                 <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
                 <li><a href="./aboutUs.php">Sobre nosotros</a></li>
             </ul>
