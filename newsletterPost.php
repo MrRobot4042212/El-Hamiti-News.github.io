@@ -17,7 +17,7 @@ $mail->SMTPOptions = array(
     )
 );
 
-$mail->Host = '10.5.2.4'; // Servidor SMTP
+$mail->Host = 'email.server.elhamiti.local'; // Servidor SMTP
 $mail->SMTPSecure = 'TLS'; // Protocolo SSL o TLS
 $mail->Port = 587; // Puerto de conexión al servidor SMTP
 $mail->SMTPAuth = true; // Para habilitar o deshabilitar la autenticación
