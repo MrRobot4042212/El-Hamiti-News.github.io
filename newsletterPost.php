@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Body = $msg;
 
             if ($mail->Send()) {
+                var_dump($mail);
                 echo "Se ha realizado el envío";
             } else {
                 throw new Exception("Error al enviar el correo: " . $mail->ErrorInfo);
