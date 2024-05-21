@@ -557,6 +557,14 @@ aside ul li a:hover{
     gap: 20px;
 }
 
+.formMail button{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    padding: 20px;
+}
+
 
 
 footer{
