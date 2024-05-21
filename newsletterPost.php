@@ -9,7 +9,14 @@ $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
 
-$mail->IsSMTP();
+$mail->$mail->SMTPOptions = array(
+    'ssl' => array(
+        'verify_peer' => true,
+        'verify_peer_name' => true,
+        'allow_self_signed' => false
+    )
+);
+
 $mail->Host = '10.5.2.4'; // Servidor SMTP
 $mail->SMTPSecure = 'TLS'; // Protocolo SSL o TLS
 $mail->Port = 587; // Puerto de conexión al servidor SMTP
