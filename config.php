@@ -7,7 +7,7 @@ $mail = new PHPMailer;
 //$mail->SMTPDebug    = 3;
 
 $mail->IsSMTP();
-$mail->Host = '10.5.2.4';
+$mail->Host = 'email.server.elhamiti.local';
 /*ServidorSMTP*/																		
 $mail->SMTPSecure = 'tls';   /*Protocolo SSL o TLS*/
 $mail->Port = 587;   /*Puerto de conexión al servidor SMTP*/
