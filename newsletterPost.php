@@ -11,5 +11,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $msg = file_get_contents("./emailTemplate.html");
     $mail->Body    = $msg;
     $mail->Send();
+    if ($mail->Send()) {
+        echo "se a realizado el envio";
+    }
+    else {
+        echo "no se a realizado el envio";
+    }
 }
 ?>
