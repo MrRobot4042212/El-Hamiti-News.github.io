@@ -34,9 +34,9 @@ if ($lang == 'en') {
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./data/img/icon.png" type="image/x-icon">
 </head>
-<body  id="body">
+<body>
     <main class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
-        <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa"></a>
+        <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa"></a>
         <h1>Bienvenido al noticiero "El Hamiti News"</h1>
         <h2>Por favor seleccione su idioma</h2>
         <section>
