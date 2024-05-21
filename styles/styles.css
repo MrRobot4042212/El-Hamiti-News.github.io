@@ -137,8 +137,8 @@ nav ul li a{
     padding: 20px;
 }
 
-nav button:hover{
-    
+nav ul button:hover{
+
     animation:llenar 1s linear forwards ;
 
 }
