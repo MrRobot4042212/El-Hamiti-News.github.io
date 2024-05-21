@@ -4,7 +4,7 @@ require_once('./PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug    = 3;
+//$mail->SMTPDebug = 3;
 
 $mail->IsSMTP();
 $mail->Host = 'email.server.elhamiti.local';
