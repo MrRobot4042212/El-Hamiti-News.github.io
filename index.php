@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 require('conn.php');
@@ -57,7 +58,7 @@ if ($lang == 'en') {
         </section>
     </main>
 
-    <div id="contenido">
+    <div class="hidden" id="contenido">
         <?php
         include($contenido);
         ?>
