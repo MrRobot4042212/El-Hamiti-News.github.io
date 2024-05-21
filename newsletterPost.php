@@ -9,7 +9,7 @@ $mail = new PHPMailer;
 
 //$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
 
-$mail->$mail->SMTPOptions = array(
+$mail->SMTPOptions = array(
     'ssl' => array(
         'verify_peer' => true,
         'verify_peer_name' => true,
