@@ -548,6 +548,14 @@ aside ul li a:hover{
     justify-items: center;
 }
 
+.formMail{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
 
 
 footer{
