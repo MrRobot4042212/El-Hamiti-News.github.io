@@ -19,4 +19,3 @@ $mail->FromName = 'El hamiti News';   /*Puedes poner tu nombre, el de tu empresa
 $mail->CharSet = 'UTF-8';   /*Codificación del mensaje*/
 
 ?>
-1
