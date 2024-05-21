@@ -74,7 +74,7 @@
         </nav>
     </main>
 
-    <footer class="footer">
+    <footer class="footer hidden">
         <div class="background">
             <svg class="fondoFooter"
               version="1.1"
