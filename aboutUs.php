@@ -2,7 +2,7 @@
 session_start();
 require('conn.php');
 
-$lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'es';
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'es';
 
 if ($lang == 'en') {
     $contenido = 'aboutUs_EN.php';

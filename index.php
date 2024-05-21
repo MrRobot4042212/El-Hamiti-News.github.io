@@ -10,13 +10,11 @@ $result2 = $con->query($consulta2);
 
 $titulo = "El Hamiti News";
 
-require('conn.php');
 if (isset($_GET['lang'])) {
-    setcookie('lang', $_GET['lang'], 0, "/");
-        $lang = $_GET['lang'];
-} else {
-    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'es';
+  $_SESSION['lang'] = $_GET['lang'];
 }
+$lang = isset($_SESSION['lang']) ? $_SESSION['lang'] : 'es';
+
 
 if ($lang == 'en') {
     $contenido = 'index_EN.php';
