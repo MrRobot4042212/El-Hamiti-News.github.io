@@ -236,8 +236,6 @@ selectModo.addEventListener('click', function(){
     document.querySelector(".lenguaje").classList.remove('lenguaje');
     document.getElementById('contenido').classList.remove('hidden');
     document.querySelector('.header').classList.remove('hidden');
-    document.querySelector('.main').classList.remove('hidden');
-    document.querySelector('.footer').classList.remove('hidden');
 }
 
 window.addEventListener('beforeunload', function () {
