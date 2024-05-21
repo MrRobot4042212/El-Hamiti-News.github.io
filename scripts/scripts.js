@@ -116,9 +116,10 @@ window.addEventListener('scroll', function() {
   }
 });
 
-let selectIdioma = document.querySelector('.idiomas');
+let selectIdioma = document.querySelectorAll('.idiomas');
 
-selectIdioma.addEventListener('click', function(){
+selectIdioma.forEach.(function(seleccionIdioma){
+seleccionIdioma.addEventListener('click', function(){
 
   let containerIdiomas = document.querySelector('.contenedorIdiomas');
 
@@ -130,7 +131,7 @@ selectIdioma.addEventListener('click', function(){
     containerIdiomas.classList.add('hidden');
   }
 });
-
+})
 
 let modoClaro= document.querySelector('.lightMode');
 let modoOscuro= document.querySelector('.darkMode');
