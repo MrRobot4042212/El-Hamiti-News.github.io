@@ -123,14 +123,14 @@ selectIdioma.addEventListener('click', function(){
 
   let containerIdiomas = document.querySelectorAll('.contenedorIdiomas');
 
-  containerIdiomas.forEach(function(){
-    
-    if (containerIdiomas.classList.contains('hidden')){
-      containerIdiomas.classList.remove('hidden');
+  containerIdiomas.forEach(function(elemento){
+
+    if (elemento.classList.contains('hidden')){
+      elemento.classList.remove('hidden');
   
     }
     else{
-      containerIdiomas.classList.add('hidden');
+      elemento.classList.add('hidden');
     }
   });
 
