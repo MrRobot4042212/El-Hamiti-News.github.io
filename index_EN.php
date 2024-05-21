@@ -1,4 +1,5 @@
-<header id="header"class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
+    <body id="body">
+    <header id="header"<?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
