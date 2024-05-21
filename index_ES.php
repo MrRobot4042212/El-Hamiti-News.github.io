@@ -3,7 +3,7 @@
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><input style="backdrop-filter:20px ;" type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
+                <li><input style="backdrop-filter:20px ;" type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
                 <li><a class="optLink" href="./index.php">Pagina principal</a></li>
                 <li><a class="optLink" href="./aboutUs.php">Sobre nosotros</a></li>
                     <li><a class="idiomas">
