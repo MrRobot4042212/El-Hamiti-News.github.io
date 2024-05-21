@@ -554,6 +554,7 @@ aside ul li a:hover{
     align-content: center;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 
