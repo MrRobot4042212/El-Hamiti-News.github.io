@@ -64,6 +64,19 @@ let inputFiltroNoticia = document.querySelectorAll(".inputTitulo");
 inputFiltroNoticia.forEach(function (inputF) {
   inputF.addEventListener('keydown', function () {
 
+    const busqueda1 = document.getElementById('busqueda1');
+    const busqueda2 = document.getElementById('busqueda2');
+
+    function sincronizarValores(event) {
+      if (event.target === busqueda1) {
+          busqueda2.value = busqueda1.value;
+      } else if (event.target === busqueda2) {
+          busqueda1.value = busqueda2.value;
+      }
+  }
+  busqueda1.addEventListener('input', sincronizarValores);
+  busqueda2.addEventListener('input', sincronizarValores);
+
     let inputValue = inputF.value.toLowerCase();
     if (inputValue === ""){
       tituloNoticia.forEach(function (filtrado) {
@@ -143,6 +156,7 @@ selectModo.addEventListener('click', function(){
         let generosContainer = document.getElementById('generos');
         let stopColor1 = document.getElementById('stopColor1');
         let stopColor2 = document.getElementById('stopColor2');
+      
 
         if (seleccion.classList.contains('darkMode')) {
           modBody.style.backgroundColor = "#1a2c32";
@@ -153,6 +167,11 @@ selectModo.addEventListener('click', function(){
           for (let link of allDocument) {
             link.style.color = "#ffffff";
           }
+
+          inputFiltroNoticia.forEach(elementInput =>{
+            elementInput = elementInput.style.color="black"
+
+          });
           generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
           stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
           stopColor2.style.stopColor="rgb(59, 117, 127,1)"
@@ -183,6 +202,10 @@ selectModo.addEventListener('click', function(){
           for (let link of allDocument) {
             link.style.color = "#e2d1a5";
           }
+          inputFiltroNoticia.forEach(elementInput =>{
+            elementInput = elementInput.style.color="black"
+
+          });
           
           generosContainer.style.backgroundColor="#73422d"
           stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
@@ -215,8 +238,11 @@ selectModo.addEventListener('click', function(){
     document.querySelector('.header').classList.remove('hidden');
     document.querySelector('.main').classList.remove('hidden');
     document.querySelector('.footer').classList.remove('hidden');
-
 }
+
+window.addEventListener('beforeunload', function () {
+  document.cookie = 'lang=; Max-Age=0; path=/';
+});
 
 
 

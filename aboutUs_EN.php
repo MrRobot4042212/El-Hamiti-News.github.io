@@ -1,78 +1,78 @@
-<body id="body">
-    <header id="header"class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
-        <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
+  <header id="header">
+        <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
-                <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Search the article tittle"></li>
-                <li><a class="optLink" href="./index_EN.html">Main Page</a></li>
-                <li><a class="optLink" href="./sobreNosotros_EN.html">About Us</a></li>
+                <li><a class="optLink" href="./index.php">Main Page</a></li>
+                <li><a class="optLink" href="./aboutUs.php">About Us</a></li>
                 <li><a class="idiomas">
                     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Language"><path d="M14 19c3.771 0 5.657 0 6.828-1.172C22 16.657 22 14.771 22 11c0-3.771 0-5.657-1.172-6.828C19.657 3 17.771 3 14 3h-4C6.229 3 4.343 3 3.172 4.172 2 5.343 2 7.229 2 11c0 3.771 0 5.657 1.172 6.828.653.654 1.528.943 2.828 1.07"/><path d="M14 19c-1.236 0-2.598.5-3.841 1.145-1.998 1.037-2.997 1.556-3.489 1.225-.492-.33-.399-1.355-.212-3.404L6.5 17.5"/><path d="M5.5 13.5l1-2m0 0l1.106-2.211a1 1 0 0 1 1.788 0L10.5 11.5m-4 0h4m0 0l1 2m1-6h1.982V9c0 .5-.496 1.5-1.487 1.5m3.964-3v2m0 0v4m0-4H18.5"/></svg>
-                    <ul class="contenedorIdiomas">
-                      <li>
-                          <form action="index.php" method="get">
-                              <input type="hidden" name="lang" value="es">
-                              <button type="submit">Español</button>
-                          </form>
-                      </li>
-                      <li>
-                          <form action="index.php" method="get">
-                              <input type="hidden" name="lang" value="en">
-                              <button type="submit">English</button>
-                          </form>
-                      </li>
+                    <ul class="contenedorIdiomas hidden">
+                        <a href="./index.php"><li>Español</li></a>
+                        <a href="./index.php"><li>English</li></a>
                     </ul>
                 </a></li>
-                <li><a class="modosVision">
-                    <svg style="color: white;" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-Glasses"><circle cx="6" cy="14" r="4"/><circle cx="18" cy="14" r="4"/><path d="M10 14l.211-.106a4 4 0 0 1 3.578 0L14 14"/><path d="M19 6l2.838 6.623a2 2 0 0 1 .162.788V14"/><path d="M5 6l-2.838 6.623A2 2 0 0 0 2 13.41V14"/></svg>
-                    <ul class="contenedorModosVision hidden">
-                        <a><li class="darkMode opcionModo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-MoonFill"><path d="M20.958 15.325c.204-.486-.379-.9-.868-.684a7.684 7.684 0 0 1-3.101.648c-4.185 0-7.577-3.324-7.577-7.425a7.28 7.28 0 0 1 1.134-3.91c.284-.448-.057-1.068-.577-.936C5.96 4.041 3 7.613 3 11.862 3 16.909 7.175 21 12.326 21c3.9 0 7.24-2.345 8.632-5.675z"/><path d="M15.611 3.103c-.53-.354-1.162.278-.809.808l.63.945a2.332 2.332 0 0 1 0 2.588l-.63.945c-.353.53.28 1.162.81.808l.944-.63a2.332 2.332 0 0 1 2.588 0l.945.63c.53.354 1.162-.278.808-.808l-.63-.945a2.332 2.332 0 0 1 0-2.588l.63-.945c.354-.53-.278-1.162-.809-.808l-.944.63a2.332 2.332 0 0 1-2.588 0l-.945-.63z"/></svg>
-                        </li></a>
-                        <a><li class="lightMode opcionModo">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor" stroke-width="2" class="ai ai-SunFill"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M12 1a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V2a1 1 0 0 1 1-1zM3.293 3.293a1 1 0 0 1 1.414 0l1.5 1.5a1 1 0 0 1-1.414 1.414l-1.5-1.5a1 1 0 0 1 0-1.414zm17.414 0a1 1 0 0 1 0 1.414l-1.5 1.5a1 1 0 1 1-1.414-1.414l1.5-1.5a1 1 0 0 1 1.414 0zM1 12a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H2a1 1 0 0 1-1-1zm19 0a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2h-1a1 1 0 0 1-1-1zM6.207 17.793a1 1 0 0 1 0 1.414l-1.5 1.5a1 1 0 0 1-1.414-1.414l1.5-1.5a1 1 0 0 1 1.414 0zm11.586 0a1 1 0 0 1 1.414 0l1.5 1.5a1 1 0 0 1-1.414 1.414l-1.5-1.5a1 1 0 0 1 0-1.414zM12 20a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1z"/></svg>
-                        </li></a>
-                        <a><li class="readMode opcionModo">
-                            <svg style="color:salmon;" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-BookOpen"><path d="M2 6s1.5-2 5-2 5 2 5 2v14s-1.5-1-5-1-5 1-5 1V6z"/><path d="M12 6s1.5-2 5-2 5 2 5 2v14s-1.5-1-5-1-5 1-5 1V6z"/></svg>
-                        </li></a>
-                    </ul>
-                </li></a>
             </ul>
         </nav>
     </header>
- 
-    <main>
-        <aside id="generos" class="generos">
-            <ul id="barraGeneros">
-                <?php
-                while($row2 = $result2 -> fetch_assoc()){
-                    echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
-                }
-                ?>
-            </ul>
-            <p id="seleccionFiltro"></p>
-        </aside>
 
-        <div class="contenedorNoticias">
-            <?php 
-            while ($row = $result ->  fetch_assoc()) {
-                echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
-                echo '<div>';
-                echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
-                echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . '</h5>';
-                echo '<p class="contenidoArticulo">' . $row['Contenido_noticia'] .  '</p>';
-                echo '</div>';
-                echo '</article>';
-            }
-            ?>
+    <main>
+        <div class="contenedorAbout">
+            <div class="infoEmpresa">
+                <h1>Our Company</h1>
+                <p>
+                    Welcome to our leading IT news company in the market! At the heart of our mission is the commitment to provide our clients with the most up-to-date, reliable, and relevant information in the world of technology. We are more than just a news source; we are your trusted partner in the vast and ever-changing technological landscape.
+                </p>
+                <h1>Team</h1>
+                <p>
+                    Our company is composed of different departments: <br>
+                    - Networks Department & services: Antonio Perales, Felipe Gimenez, Josias  Gonzalez, and Alfonso Chicoma <br>
+                    - Web development: Alfonso Chicoma <br>
+                    - Marketing Department: Ismael El Hamiti <br>
+                </p>
+                <div class="imgEquipo">
+                    <div class="carta">
+                        <img src="./data/img/equipo/antonioPerales.png">
+                        <p>Antonio Perales</p>
+                    </div>
+                    <div class="carta">
+                        <img src="./data/img/equipo/Felipe.png">
+                        <p>Felipe Gimenez</p>
+                    </div>
+                    <div class="carta">
+                        <img src="./data/img/equipo/Josias_2.png">
+                        <p>Josias Gonzalez</p>
+                    </div>
+                    <div class="carta">
+                        <img src="./data/img/equipo/alfonso.png">
+                        <p>Alfonso Chicoma</p>
+                    </div>
+                    <div class="carta">
+                        <img src="./data/img/equipo/ismael.png">
+                        <p>Ismael El Hamiti</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="serviciosEmpresa">
+                <h1>What we offer</h1>
+                <p>
+                    Our services encompass a wide range of platforms to meet the needs of our diverse clients. Firstly, we offer an online news portal that features detailed articles, in-depth analyses, and exclusive interviews with industry leaders. Here, you can explore emerging trends, discover new innovations, and stay updated with the latest developments in the world of technology.
+
+                    In addition to our online portal, we also offer email newsletters, delivering the most important news directly to your inbox. These newsletters are designed to be concise and accessible, providing you with essential information quickly and conveniently.
+                </p>
+                <div class="contenedorNewsletter">
+                    <h2>Suscribe to our newsletter</h2>
+                    <form action="./newsletterPost.php" method="post">
+                        <input type="text" name="correo" id="inputCorreo" placeholder="Introduce your email">
+                        <button type="submit">¡Join!</button>
+
+                    </form>
+                </div>
+
+            </div>
         </div>
-        <nav>
-            <ul class="urlFooter">
-                <li><input type="text" id="busqueda" class="inputTitulo busqueda" placeholder="Busque el titulo de la noticia"></li>
-                <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
-                <li><a href="./aboutUs.php">Sobre nosotros</a></li>
-            </ul>
-        </nav>
+
     </main>
 
     <footer class="footer">
@@ -165,17 +165,7 @@
             </a>
         </aside>
     </footer>
-
+    
     <script src="./scripts/jquery-3.7.1.min.js"></script>
     <script src="./scripts/scripts.js"></script>
-    
-</body>
-
-</html>
-
-
-
-
-
-
 

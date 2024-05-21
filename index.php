@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('conn.php');
 $consulta = "SELECT * FROM Noticias INNER JOIN Secciones ON Secciones.ID_seccion = Noticias.ID_seccion";
 $result = $con->query($consulta);
@@ -8,7 +9,13 @@ $result2 = $con->query($consulta2);
 
 $titulo = "El Hamiti News";
 
-$lang = isset($_GET['lang']) ? $_GET['lang'] : 'es';
+require('conn.php');
+if (isset($_GET['lang'])) {
+    setcookie('lang', $_GET['lang'], 0, "/");
+        $lang = $_GET['lang'];
+} else {
+    $lang = isset($_COOKIE['lang']) ? $_COOKIE['lang'] : 'es';
+}
 
 if ($lang == 'en') {
     $contenido = 'index_EN.php';
@@ -16,6 +23,8 @@ if ($lang == 'en') {
     $contenido = 'index_ES.php';
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -24,9 +33,6 @@ if ($lang == 'en') {
     <title><?php echo $titulo; ?></title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="shortcut icon" href="./data/img/icon.png" type="image/x-icon">
-    <style>
-        .hidden { display: none; }
-    </style>
 </head>
 <body>
     <main class="lenguaje <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
