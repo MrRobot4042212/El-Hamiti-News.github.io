@@ -19,7 +19,7 @@ $mail->SMTPOptions = array(
 
 $mail->Host = 'email.server.elhamiti.local'; // Servidor SMTP
 $mail->SMTPSecure = 'TLS'; // Protocolo SSL o TLS
-$mail->Port = 143; // Puerto de conexión al servidor SMTP
+$mail->Port = 587; // Puerto de conexión al servidor SMTP
 $mail->SMTPAuth = true; // Para habilitar o deshabilitar la autenticación
 $mail->Username = 'admin@server.elhamiti.local'; // Usuario, normalmente el correo electrónico
 $mail->Password = 'admin_elhamiti'; // Tu contraseña
