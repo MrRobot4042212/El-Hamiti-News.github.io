@@ -45,13 +45,17 @@ if ($lang == 'en') {
                 <li>
                     <form action="index.php" method="get">
                         <input type="hidden" name="lang" value="es">
-                        <button type="submit">Español</button>
+                        <button type="submit">Español
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/spain.png" alt="spain"/>
+                        </button>
                     </form>
                 </li>
                 <li>
                     <form action="index.php" method="get">
                         <input type="hidden" name="lang" value="en">
-                        <button type="submit">English</button>
+                        <button type="submit">English
+                        <img width="100" height="100" src="https://img.icons8.com/plasticine/100/great-britain.png" alt="great-britain"/>
+                        </button>
                     </form>
                 </li>
             </ul>
