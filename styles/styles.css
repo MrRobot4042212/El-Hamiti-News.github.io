@@ -51,14 +51,14 @@ html{
     
 
 
-body{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-template-rows: auto;
-    grid-column-gap: 0px;
-    grid-row-gap: 30px;
-    background-color: #1a2c32;
-    }
+    body{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: auto;
+        grid-column-gap: 0px;
+        grid-row-gap: 30px;
+        background-color: #1a2c32;
+        }
 
 header{
     display: flex;
@@ -271,6 +271,13 @@ button {
 main{
         grid-area: 2 / 1 / 5 / 8;
         margin: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        
     }
 
 
