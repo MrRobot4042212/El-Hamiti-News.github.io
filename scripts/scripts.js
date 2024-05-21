@@ -244,9 +244,6 @@ selectModo.addEventListener('click', function(){
     document.querySelector('.header').classList.remove('hidden');
 }
 
-window.addEventListener('beforeunload', function () {
-  document.cookie = 'lang=; Max-Age=0; path=/';
-});
 
 
 
