@@ -123,15 +123,19 @@ selectIdioma.addEventListener('click', function(){
 
   let containerIdiomas = document.querySelectorAll('.contenedorIdiomas');
 
+  containerIdiomas.forEach(function(){
+    
+    if (containerIdiomas.classList.contains('hidden')){
+      containerIdiomas.classList.remove('hidden');
+  
+    }
+    else{
+      containerIdiomas.classList.add('hidden');
+    }
+  });
 
 
-  if (containerIdiomas.classList.contains('hidden')){
-    containerIdiomas.classList.remove('hidden');
 
-  }
-  else{
-    containerIdiomas.classList.add('hidden');
-  }
 });
 
 let modoClaro= document.querySelector('.lightMode');
