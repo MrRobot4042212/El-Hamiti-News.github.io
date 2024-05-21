@@ -42,22 +42,25 @@ if ($lang == 'en') {
         <h2>Por favor seleccione su idioma</h2>
         <section>
             <ul class="contenedorIdiomas">
-                <li>
-                    <form action="index.php" method="get">
-                        <input type="hidden" name="lang" value="es">
-                        <button type="submit">Español
+              <li>
+                    <form action="" method="get">
+                    <input type="hidden" name="lang" value="es">
+                    <button data-lang="es" class="opcionIdioma" type="submit">
+                        <h1 >Español</h1>
                         <img width="100" height="100" src="https://img.icons8.com/plasticine/100/spain.png" alt="spain"/>
-                        </button>
-                    </form>
-                </li>
-                <li>
-                    <form action="index.php" method="get">
-                        <input type="hidden" name="lang" value="en">
-                        <button type="submit">English
+                    </button>
+                </form>
+              </li>
+            <li>
+                <form action="" method="get">
+                    <input type="hidden" name="lang" value="en">
+                    <button data-lang="en" class="opcionIdioma" type="submit">
+                        <h1>English</h1>
                         <img width="100" height="100" src="https://img.icons8.com/plasticine/100/great-britain.png" alt="great-britain"/>
-                        </button>
-                    </form>
-                </li>
+                    </button>
+                </form>
+            </li>
+
             </ul>
         </section>
     </main>
