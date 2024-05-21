@@ -135,6 +135,11 @@ nav ul li a{
     font-family: 'Montserrat';
     font-size: 20px;
     padding: 20px;
+}
+
+nav button:hover{
+    
+    animation:llenar 1s linear forwards ;
 
 }
 
