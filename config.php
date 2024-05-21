@@ -9,7 +9,7 @@ $mail = new PHPMailer;
 $mail->IsSMTP();
 $mail->Host = '10.5.2.4';
 /*ServidorSMTP*/																		
-$mail->SMTPSecure = 'TLS';   /*Protocolo SSL o TLS*/
+$mail->SMTPSecure = 'tls';   /*Protocolo SSL o TLS*/
 $mail->Port = 587;   /*Puerto de conexión al servidor SMTP*/
 $mail->SMTPAuth = true;   /*Para habilitar o deshabilitar la autenticación*/
 $mail->Username = 'admin@server.elhamiti.local';   /*Usuario, normalmente el correo electrónico*/
