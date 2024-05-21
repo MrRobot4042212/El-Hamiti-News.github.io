@@ -41,7 +41,7 @@ if ($lang == 'en') {
         <h1>Bienvenido al noticiero "El Hamiti News"</h1>
         <h2>Por favor seleccione su idioma</h2>
         <section>
-            <ul class="contenedorIdiomas">
+            <ul class="contenedorIdiomas listaHorizontal">
               <li>
                     <form action="" method="get">
                     <input type="hidden" name="lang" value="es">
@@ -51,7 +51,7 @@ if ($lang == 'en') {
                     </button>
                 </form>
               </li>
-            <li>
+              <li>
                 <form action="" method="get">
                     <input type="hidden" name="lang" value="en">
                     <button data-lang="en" class="opcionIdioma" type="submit">
@@ -59,7 +59,7 @@ if ($lang == 'en') {
                         <img width="100" height="100" src="https://img.icons8.com/plasticine/100/great-britain.png" alt="great-britain"/>
                     </button>
                 </form>
-            </li>
+              </li>
 
             </ul>
         </section>
