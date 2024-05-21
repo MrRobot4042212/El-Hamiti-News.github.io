@@ -213,6 +213,61 @@ a{
     text-decoration: none;
 }
 
+.lenguaje{
+    grid-area: 1 / 1 / 6 / 8 ;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.lenguaje section{
+    border-top: 1px rgb(128, 128, 128,0.5) solid;
+}
+
+.lenguaje *{
+    text-align: center;
+    font-family: "montserrat";
+    text-decoration: none;
+    color: white;
+}
+
+.listaHorizontal{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.listaHorizontal li{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.listaHorizontal li:hover{
+    transform: scale(1.05);
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-user-select: none; 
+     -webkit-appearance: button;
+       -moz-user-select: none;
+        -ms-user-select: none;
+  }
+
+
+
 main{
         grid-area: 2 / 1 / 5 / 8;
         margin: 20px;

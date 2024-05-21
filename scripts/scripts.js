@@ -117,10 +117,7 @@ selectIdioma.addEventListener('click', function(){
   else{
     containerIdiomas.classList.add('hidden');
   }
-
 });
-
-
 
 let modoClaro= document.querySelector('.lightMode');
 let modoOscuro= document.querySelector('.darkMode');
@@ -141,7 +138,7 @@ selectModo.addEventListener('click', function(){
     seleccionModo.forEach(function (seleccion){
       seleccion.addEventListener('click', function(){
         let modBody = document.getElementById('body');
-        let modHeader = document.getElementById('header').children;
+        let modHeader = document.querySelector('.header').children;
         let allDocument = document.getElementsByTagName("*");
         let generosContainer = document.getElementById('generos');
         let stopColor1 = document.getElementById('stopColor1');
@@ -211,6 +208,15 @@ selectModo.addEventListener('click', function(){
     });
   });
 
+  if (window.location.search.includes('lang=')) {
+    document.querySelector('.lenguaje').classList.add('hidden');
+    document.querySelector(".lenguaje").classList.remove('lenguaje');
+    //document.getElementById('contenido').classList.remove('hidden');
+    document.querySelector('.header').classList.remove('hidden');
+    document.querySelector('.main').classList.remove('hidden');
+    document.querySelector('.footer').classList.remove('hidden');
+
+}
 
 
 

@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="./data/img/icon.png" type="image/x-icon">
 </head>
 <body id="body">
-    <header id="header">
+
+    <header class="header hidden" id="header">
         <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
         <nav>
             <ul class="url">
@@ -40,7 +41,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main hidden">
         <aside id="generos" class="generos">
             <ul id="barraGeneros">
                 <li><a class="genero">Ciberseguridad</a></li>
@@ -238,7 +239,42 @@
         </nav>
     </main>
 
-    <footer class="footer">
+    <main class="lenguaje">
+        <a href="./index.html" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
+
+        <h1>
+            Bienvenido al noticiero "El Hamiti News"
+        </h1>
+        <h2>
+            Por favor seleccione su idioma
+        </h2>
+
+        <section>
+        <ul class="listaHorizontal">
+    <li>
+        <form action="" method="get">
+            <input type="hidden" name="lang" value="es">
+            
+            <button data-lang="es" class="opcionIdioma" type="submit">
+                <h1 >Español</h1>
+                <img width="100" height="100" src="https://img.icons8.com/plasticine/100/spain.png" alt="spain"/>
+            </button>
+
+        </form>
+    </li>
+    <li>
+        <form action="" method="get">
+            <input type="hidden" name="lang" value="en">
+            <button data-lang="en" class="opcionIdioma" type="submit">
+                <h1>English</h1>
+                <img width="100" height="100" src="https://img.icons8.com/plasticine/100/great-britain.png" alt="great-britain"/>
+            </button>
+        </form>
+    </li>
+</ul>
+        </section>
+</main>
+    <footer class="footer hidden">
         <div class="background">
             <svg class="fondoFooter"
               version="1.1"
