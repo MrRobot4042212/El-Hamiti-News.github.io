@@ -152,6 +152,10 @@ nav ul li a:hover{
     padding: 20px;
 }
 
+.textButton:hover{
+    animation:llenar 1s linear forwards ;
+}
+
 .idiomas{
     position: relative;
     cursor: pointer;
