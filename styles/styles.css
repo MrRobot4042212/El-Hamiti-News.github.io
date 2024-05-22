@@ -441,11 +441,7 @@ aside ul li a:hover{
     background-color: yellow;
     z-index: -1;
 }
-.imgNoticia:hover{
-    transform: scale(1.5);
-    width: auto;
 
-}
 
 .contenedorAbout{
     display: grid;
