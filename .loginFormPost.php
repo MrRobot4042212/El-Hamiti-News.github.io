@@ -10,6 +10,7 @@ $pass = $_POST['password'];
 
 // Consulta para verificar las credenciales
 $sql = "SELECT user, host FROM mysql.user WHERE user = '$user' AND authentication_string = PASSWORD('$pass')";
+
 $result = mysqli_query($con, $sql);
 
 // Verificar si la consulta se ejecutó correctamente
