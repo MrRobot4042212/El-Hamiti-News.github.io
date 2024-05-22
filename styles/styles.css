@@ -701,6 +701,16 @@ max-height: 30px;
     color: white;
 }
 
+.tituloLeyenda{
+    font-family: 'montserrat';
+    font-weight: normal;
+    font-style:normal;
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
 .leyendaContenido{
     display: flex;
     

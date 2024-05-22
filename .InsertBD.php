@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
 
 
 $query = "SELECT MAX(ID_noticia) AS maximo FROM Noticias";
-$query2 = "SELECT ID_seccion, Seccion_noticia, Seccion_noticia_en FROM Secciones";
+$query2 = "SELECT ID_seccion, Seccion_noticia, Seccion_noticia_en FROM ";
 
 $result = $con->query($query);
 $result2 = $con->query($query2);
@@ -78,9 +78,9 @@ $con->close();
     <section class="leyenda">
     <?php
         if ($result2->num_rows > 0) {
+            echo '<h1 class="tituloLeyenda">'. "Leyenda id's secciones" ."</h1>";
             while($row = $result2->fetch_assoc()) {
                 echo '<section class="leyenda">';
-                echo "<h1>" . "Leyenda id's secciones" ."</h1>";
                 echo '<aside class="leyendaContenido">';
                 echo "<h1>" . $row["ID_seccion"] . "</h1>";
                 echo "<h2>" . $row["Seccion_noticia"] . "</h2>";
