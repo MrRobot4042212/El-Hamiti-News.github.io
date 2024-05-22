@@ -19,8 +19,8 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <h1>Buenos dias, <?php echo ($_SESSION['username']); ?>!</h1>
     <section class="verificacion">
+    <h1 class="row1">Buenos dias, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
         <h1 class="textRedactores">Redaccion de noticias</h1>
 
@@ -51,7 +51,7 @@ if (!isset($_SESSION['username'])) {
 
             <input type="submit" value="Publicar">
         </form>
+        <a class="textButton" href="logout.php">Cerrar sesión</a>
     </section>
-    <a href="logout.php">Cerrar sesión</a>
 </body>
 </html>
