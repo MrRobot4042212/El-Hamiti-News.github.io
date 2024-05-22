@@ -27,6 +27,7 @@ $stmt->bind_param("sssssis", $titulo_noticia_es, $titulo_noticia_en, $fecha_noti
 
 if ($stmt->execute()) {
     echo "Nueva noticia creada con éxito";
+    header("Location: ./.InsertBD.php");
 } else {
     echo "Error: " . $stmt->error;
 }
