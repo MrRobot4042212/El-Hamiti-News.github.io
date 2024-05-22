@@ -23,7 +23,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     if ($password === $stored_password) {
 
         $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
+        header("Location: ./.insertDB.php");
         exit();
     } else {
         echo "Contraseña incorrecta";
