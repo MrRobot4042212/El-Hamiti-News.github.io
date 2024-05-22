@@ -19,7 +19,10 @@ $id_seccion = $_POST['id_seccion'];
 $urlImg = $_POST['urlImg'];
 
 // Preparar la consulta SQL para insertar datos
-$stmt = $conn->prepare("INSERT INTO Noticias (Titulo_noticia, Titulo_noticia_en, Fecha_noticia, Contenido_noticia, Contenido_noticia_en, ID_seccion, urlImg) VALUES (?, ?, ?, ?, ?, ?, ?)");
+$stmt = $con->prepare("INSERT INTO Noticias (Titulo_noticia, Titulo_noticia_en, Fecha_noticia, Contenido_noticia, Contenido_noticia_en, ID_seccion, urlImg) VALUES (?, ?, ?, ?, ?, ?, ?)");
+if ($stmt === false) {
+    die("Error en la preparación de la declaración: " . $con->error);
+}
 $stmt->bind_param("sssssis", $titulo_noticia_es, $titulo_noticia_en, $fecha_noticia, $contenido_noticia_es, $contenido_noticia_en, $id_seccion, $urlImg);
 
 if ($stmt->execute()) {
@@ -29,5 +32,5 @@ if ($stmt->execute()) {
 }
 
 $stmt->close();
-$conn->close();
+$con->close();
 ?>

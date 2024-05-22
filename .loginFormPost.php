@@ -1,36 +1,36 @@
 <?php
-// Incluir el archivo de conexión
-require('./conn.php');
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 
-// Verificar si el usuario está logueado
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
+require('conn.php');
 
-// Obtener datos del formulario
-$titulo_noticia_es = $_POST['titulo_noticia_es'];
-$titulo_noticia_en = $_POST['titulo_noticia_en'];
-$fecha_noticia = $_POST['fecha_noticia'];
-$contenido_noticia_es = $_POST['contenido_noticia_es'];
-$contenido_noticia_en = $_POST['contenido_noticia_en'];
-$id_seccion = $_POST['id_seccion'];
-$urlImg = $_POST['urlImg'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-// Preparar la consulta SQL para insertar datos
-$stmt = $con->prepare("INSERT INTO Noticias (Titulo_noticia, Titulo_noticia_en, Fecha_noticia, Contenido_noticia, Contenido_noticia_en, ID_seccion, urlImg) VALUES (?, ?, ?, ?, ?, ?, ?)");
-if ($stmt === false) {
-    die("Error en la preparación de la declaración: " . $con->error);
-}
-$stmt->bind_param("sssssis", $titulo_noticia_es, $titulo_noticia_en, $fecha_noticia, $contenido_noticia_es, $contenido_noticia_en, $id_seccion, $urlImg);
+$query = "SELECT idRedactor, password FROM redactores WHERE usuario = ?";
+$stmt = mysqli_prepare($con, $query);
+mysqli_stmt_bind_param($stmt, "s", $username);
+mysqli_stmt_execute($stmt);
+$result = mysqli_stmt_get_result($stmt);
 
-if ($stmt->execute()) {
-    echo "Nueva noticia creada con éxito";
+if ($result && mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+    $stored_password = $row['password'];
+
+    if ($password === $stored_password) {
+
+        $_SESSION['username'] = $username;
+        header("Location: ./.InsertBD.php");
+        exit();
+    } else {
+        echo "Contraseña incorrecta";
+    }
 } else {
-    echo "Error: " . $stmt->error;
+    echo "Nombre de usuario incorrecto";
 }
 
-$stmt->close();
-$con->close();
+mysqli_close($con);
 ?>
