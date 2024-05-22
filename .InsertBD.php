@@ -77,8 +77,8 @@ $con->close();
     </section>
     <section class="leyenda">
     <?php
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
+        if ($result2->num_rows > 0) {
+            while($row = $result2->fetch_assoc()) {
                 echo '<section class="leyenda">';
                 echo "<h1>" . "Leyenda id's secciones" ."</h1>";
                 echo '<aside class="leyendaContenido">';
