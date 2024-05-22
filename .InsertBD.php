@@ -36,7 +36,7 @@ $con->close(); // Usar $con para cerrar la conexión
 </head>
 <body>
     <section class="verificacion">
-        <h1 class="row1">Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <h1 class="row1" >Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo"></a>
         <h1 class="textRedactores">Redacción de noticias</h1>
         <form action="./.insertBDPost.php" method="POST">

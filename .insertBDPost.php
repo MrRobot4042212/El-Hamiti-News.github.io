@@ -26,8 +26,10 @@ if ($stmt === false) {
 $stmt->bind_param("sssssis", $titulo_noticia_es, $titulo_noticia_en, $fecha_noticia, $contenido_noticia_es, $contenido_noticia_en, $id_seccion, $urlImg);
 
 if ($stmt->execute()) {
-    echo "Nueva noticia creada con éxito";
-    header("Location: ./.InsertBD.php");
+    // Obtener el ID de la última inserción
+    $last_id = $con->insert_id;
+    echo "Nueva noticia creada con éxito. ID: " . $last_id;
+    header("Location: ./.InsertBD.php"); // Redirigir a la página de inserción
 } else {
     echo "Error: " . $stmt->error;
 }
