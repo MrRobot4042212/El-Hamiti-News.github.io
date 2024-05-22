@@ -1,9 +1,20 @@
+    <?php
+    session_start();
+    require('conn.php');
+    $consulta = "SELECT * FROM Noticias INNER JOIN Secciones ON Secciones.ID_seccion = Noticias.ID_seccion";
+    $result = $con->query($consulta);
+
+    $consulta2 = "SELECT * FROM Secciones";
+    $result2 = $con->query($consulta2);
+    ?>
+    
+    
     <body id="body">
     <header id="header" class="header <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
         <nav>
             <ul class="url">
-            <li><input type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Introduce the article tittle"></li>
+            <li><input type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Search the article tittle"></li>
             <li><a class="optLink" href="./index.php">Main Page</a></li>
                 <li><a class="optLink" href="./aboutUs.php">About Us</a></li>
                 <li><a class="idiomas">
@@ -70,7 +81,7 @@
             <ul class="urlFooter">
                 <li><input type="text" id="busqueda2" class="inputTitulo busqueda" placeholder="Search the article tittle"></li>
                 <li><a href="#header"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ai ai-ArrowUp"><path d="M12 20V4"/><path d="M5 11l7-7 7 7"/></svg></a></li>
-                <li><a href="./aboutUs.php">Sobre nosotros</a></li>
+                <li><a href="./aboutUs.php">About Us</a></li>
             </ul>
         </nav>
     </main>

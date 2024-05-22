@@ -78,10 +78,9 @@
                 </p>
                 <div class="contenedorNewsletter">
                     <h2>Suscribe to our newsletter</h2>
-                    <form action="./newsletterPost.php" method="post">
-                        <input type="text" name="correo" id="inputCorreo" placeholder="Introduce your email">
-                        <button type="submit">¡Join!</button>
-
+                    <form class="formMail" action="./newsletterPost.php" method="post">
+                        <input type="text" name="email" id="inputCorreo" placeholder="Introduzca su correo">
+                        <button type="submit">Join!</button>
                     </form>
                 </div>
 

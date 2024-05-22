@@ -1,3 +1,14 @@
+<?php
+  session_start();
+  require('conn.php');
+  $consulta = "SELECT * FROM Noticias INNER JOIN Secciones ON Secciones.ID_seccion = Noticias.ID_seccion";
+  $result = $con->query($consulta);
+
+  $consulta2 = "SELECT * FROM Secciones";
+  $result2 = $con->query($consulta2);
+?>
+
+
 <body id="body">
     <header id="header"class="header <?php echo isset($_GET['lang']) ? 'hidden' : ''; ?>">
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="logo de la empresa" ></a>
