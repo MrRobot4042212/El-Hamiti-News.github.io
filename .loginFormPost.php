@@ -4,36 +4,27 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 require('conn.php');
-$user = $_POST['username'];
-$pass = $_POST['password'];
-$host = $_POST['host'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
-// Consulta para seleccionar el usuario y el hash de la contraseña de la base de datos
-$sql = "SELECT user, host, authentication_string FROM mysql.user WHERE user = ? AND host = ?";
-$stmt = mysqli_prepare($con, $sql);
-mysqli_stmt_bind_param($stmt, "ss", $user, $host);
+$query = "SELECT password FROM redactores WHERE usuario = ?";
+$stmt = mysqli_prepare($con, $query);
+mysqli_stmt_bind_param($stmt, "s", $username);
 mysqli_stmt_execute($stmt);
 $result = mysqli_stmt_get_result($stmt);
 
-if ($result === false) {
-    echo "Error en la consulta: " . mysqli_error($con);
-} else {
-    if (mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result);
-        $stored_password_hash = $row['authentication_string'];
+if ($result && mysqli_num_rows($result) > 0) {
 
-        // Verificar si la contraseña proporcionada coincide con el hash almacenado
-        if (password_verify($pass, $stored_password_hash)) {
-            header("Location: ./.insertDB.php");
-            exit(); 
-        } else {
-            echo "Nombre de usuario, contraseña o host incorrectos";
-        }
+    $row = mysqli_fetch_assoc($result);
+    $stored_password_hash = $row['password'];
+    if (password_verify($password, $stored_password_hash)) {
+        echo "Inicio de sesión exitoso";
     } else {
-        echo "Nombre de usuario, contraseña o host incorrectos";
+        echo "Nombre de usuario o contraseña incorrectos";
     }
+} else {
+    echo "Nombre de usuario o contraseña incorrectos";
 }
 
-// Cerrar la conexión
 mysqli_close($con);
 ?>

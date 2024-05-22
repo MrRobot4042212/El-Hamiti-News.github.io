@@ -614,6 +614,7 @@ max-height: 30px;
     z-index: -1;
     top: 0;
     left: 0;
+ 
     right: 0;
     bottom: 0;
     height: 100%;
@@ -651,6 +652,12 @@ max-height: 30px;
     color: black;
     font-family: 'montserrat';
 
+}
+
+.textRedactores{
+    color: white;
+    font-family: 'montserrat';
+    text-align: center;
 }
 
 
