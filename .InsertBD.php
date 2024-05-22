@@ -49,7 +49,7 @@ if (!isset($_SESSION['username'])) {
             <label for="urlImg">Url de la imagen</label><br>
             <input type="text" name="urlImg" placeholder="./data/img/noticas/-archivo-"><br><br>
 
-            <input type="submit" value="Publicar">
+            <input class="textButton" type="submit" value="Publicar">
         </form>
         <a class="textButton" href="logout.php">Cerrar sesión</a>
     </section>
