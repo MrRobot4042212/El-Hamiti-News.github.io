@@ -11,7 +11,7 @@ require('conn.php');
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-// Consulta SQL para obtener el hash de la contraseña del usuario
+// Consulta SQL para obtener la contraseña del usuario
 $query = "SELECT idRedactor, password FROM redactores WHERE usuario = ?";
 $stmt = mysqli_prepare($con, $query);
 mysqli_stmt_bind_param($stmt, "s", $username);
@@ -21,10 +21,10 @@ $result = mysqli_stmt_get_result($stmt);
 // Verificar si se encontró el usuario
 if ($result && mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
-    $stored_password_hash = $row['password'];
+    $stored_password = $row['password'];
 
     // Verificar si la contraseña coincide
-    if (password_verify($password, $stored_password_hash)) {
+    if ($password === $stored_password) {
         // Inicio de sesión exitoso
         echo "Inicio de sesión exitoso para el usuario: $username";
         // Aquí podrías redireccionar al usuario a la página que desees
@@ -40,4 +40,3 @@ if ($result && mysqli_num_rows($result) > 0) {
 // Cerrar la conexión a la base de datos
 mysqli_close($con);
 ?>
-
