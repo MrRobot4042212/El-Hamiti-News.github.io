@@ -2,18 +2,19 @@
 require('./conn.php');
 session_start();
 
+// Obtener el próximo ID disponible
 $sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '$dbname' AND TABLE_NAME = 'Noticias'";
 $result = $conn->query($sql);
 
-$next_id = 1;
+$next_id = 1; // Valor predeterminado en caso de que la consulta falle
 if ($result && $row = $result->fetch_assoc()) {
     $next_id = $row['AUTO_INCREMENT'];
 }
 
 $conn->close();
 
+// Verificar si el usuario está logueado
 if (!isset($_SESSION['username'])) {
-
     header("Location: login.php");
     exit();
 }
@@ -30,18 +31,18 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <section class="verificacion">
-    <h1 class="row1">Buenos dias, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
-        <a class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
-        <h1 class="textRedactores">Redaccion de noticias</h1>
+        <h1 class="row1">Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <a class="logo"><img src="./data/img/logo.png" alt="company logo"></a>
+        <h1 class="textRedactores">Redacción de noticias</h1>
         <form action="insertBDPost.php" method="POST">
 
             <label for="id_noticia">Nº de la noticia:</label><br>
             <input type="number" name="id_noticia" value="<?php echo $next_id; ?>" required disabled><br><br>
 
-            <label for="titulo_noticia_es">Titulo de la noticia (ES):</label><br>
+            <label for="titulo_noticia_es">Título de la noticia (ES):</label><br>
             <input type="text" name="titulo_noticia_es" required><br><br>
 
-            <label for="titulo_noticia_en">Titulo de la noticia (EN):</label><br>
+            <label for="titulo_noticia_en">Título de la noticia (EN):</label><br>
             <input type="text" name="titulo_noticia_en" required><br><br>
 
             <label for="fecha_noticia">Fecha de la noticia:</label><br>
@@ -53,10 +54,10 @@ if (!isset($_SESSION['username'])) {
             <label for="contenido_noticia_en">Contenido de la noticia (EN):</label><br>
             <textarea id="contenido_noticia_en" name="contenido_noticia_en" rows="4" cols="50" style="height: 100px;"></textarea><br><br>
             
-            <label for="id_seccion">Nº de la seccion</label><br>
+            <label for="id_seccion">Nº de la sección:</label><br>
             <input type="number" name="id_seccion" required><br><br>
             
-            <label for="urlImg">Url de la imagen</label><br>
+            <label for="urlImg">URL de la imagen:</label><br>
             <input type="text" name="urlImg" placeholder="./data/img/noticas/-archivo-"><br><br>
             <input type="submit" value="Publicar">
         </form>
