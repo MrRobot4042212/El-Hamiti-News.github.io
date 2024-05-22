@@ -14,8 +14,10 @@ if (!isset($_SESSION['username'])) {
 
 
 $query = "SELECT MAX(ID_noticia) AS maximo FROM Noticias";
+$query2 = "SELECT ID_seccion, Seccion_noticia, Seccion_noticia_en FROM tu_tabla";
 
 $result = $con->query($query);
+$result2 = $con->query($query2);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
@@ -42,6 +44,7 @@ $con->close();
         <h1 class="row1" >Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo"></a>
         <h1 class="textRedactores">Redacción de noticias</h1>
+
         <form action="./.insertBDPost.php" method="POST">
 
             <label for="id_noticia">Nº de la noticia:</label><br>
@@ -71,6 +74,25 @@ $con->close();
         </form>
 
         <a class="textButton" href="logout.php">Cerrar sesión</a>
+    </section>
+    <section class="leyenda">
+    <?php
+        if ($result->num_rows > 0) {
+            while($row = $result->fetch_assoc()) {
+                echo '<section class="leyenda">';
+                echo "<h1>" . "Leyenda id's secciones" ."</h1>";
+                echo '<aside class="leyendaContenido">';
+                echo "<h1>" . $row["ID_seccion"] . "</h1>";
+                echo "<h2>" . $row["Seccion_noticia"] . "</h2>";
+                echo "</aside>";
+                echo "</section>";
+            }
+        } else {
+            echo "<tr><td colspan='3'>No se encontraron resultados</td></tr>";
+        }
+
+        
+        ?>
     </section>
 </body>
 </html>

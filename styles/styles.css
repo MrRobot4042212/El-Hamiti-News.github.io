@@ -674,6 +674,38 @@ max-height: 30px;
     text-align: center;
 }
 
+.leyenda{
+    grid-area: 1 / 1 / 1 / 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    border: #2d464c 1px solid;
+    border-radius: 10px;
+    background-color: #1a2c32;
+}
+
+.leyenda *{
+    font-family: 'montserrat';
+    font-weight: normal;
+    font-style:normal;
+    font-size: 15px;
+    margin: 10px;
+    text-align: center;
+    color: white;
+}
+
+.leyendaContenido{
+    display: flex;
+    
+}
+
 
 
 /*
