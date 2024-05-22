@@ -71,6 +71,7 @@
             <?php 
             while ($row = $result ->  fetch_assoc()) {
                 echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
+                echo '<img class="imgNoticia" src="' . $row['urlImg'] . '" alt="">';
                 echo '<div>';
                 echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
                 echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . " - " . $row['Fecha_noticia'] . '</h5>';
