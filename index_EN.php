@@ -1,11 +1,13 @@
     <?php
     session_start();
     require('conn.php');
-    $consulta = "SELECT * FROM Noticias INNER JOIN Secciones ON Secciones.ID_seccion = Noticias.ID_seccion";
-    $result = $con->query($consulta);
+    $consulta_en = "SELECT * 
+    FROM Noticias 
+    INNER JOIN Secciones ON Secciones.ID_seccion = Noticias.ID_seccion";
+    $result = $con->query($consulta_en);
 
-    $consulta2 = "SELECT * FROM Secciones";
-    $result2 = $con->query($consulta2);
+    $consulta2_en = "SELECT * FROM Secciones";
+    $result2 = $con->query($consulta2_en);
     ?>
     
     
@@ -57,7 +59,7 @@
             <ul id="barraGeneros">
                 <?php
                 while($row2 = $result2 -> fetch_assoc()){
-                    echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
+                    echo  "<li><a class='genero'>".$row2['Seccion_noticia_en']."</a></li>";
                 }
                 ?>
             </ul>
@@ -69,9 +71,9 @@
             while ($row = $result ->  fetch_assoc()) {
                 echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
                 echo '<div>';
-                echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia'] .'</h1>';
-                echo '<h5 class="subtitulo">' . $row['Seccion_noticia'] . '</h5>';
-                echo '<p class="contenidoArticulo">' . $row['Contenido_noticia'] .  '</p>';
+                echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia_en'] . $row['Fecha_noticia'] .'</h1>';
+                echo '<h5 class="subtitulo">' . $row['Seccion_noticia_en'] . '</h5>';
+                echo '<p class="contenidoArticulo">' . $row['Contenido_noticia_en'] .  '</p>';
                 echo '</div>';
                 echo '</article>';
             }

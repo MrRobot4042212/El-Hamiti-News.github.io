@@ -18,13 +18,16 @@ DROP table  IF EXISTS Noticias;
 Create Table Noticias (
 	ID_noticia int auto_increment primary key,
     Contenido_noticia text,
-    Contenido_noticia_en text,
     Fecha_noticia date,
     ID_seccion int,
     Titulo_noticia Char(100),
-    Titulo_noticia_en chat(100),
+    Contenido_noticia_en text,
+    Titulo_noticia_en Char(100),
     FOREIGN KEY(ID_seccion) REFERENCES Secciones(ID_Seccion) ON UPDATE CASCADE ON DELETE SET NULL 
     );
+
+
+
 
 
 
