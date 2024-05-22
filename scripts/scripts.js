@@ -80,7 +80,7 @@ inputFiltroNoticia.forEach(function (inputF) {
     let inputValue = inputF.value.toLowerCase();
     if (inputValue === ""){
       tituloNoticia.forEach(function (filtrado) {
-        filtrado.style.display = "block";
+        filtrado.style.display = "flex";
       });
     }
 
@@ -88,7 +88,7 @@ inputFiltroNoticia.forEach(function (inputF) {
     articulo.forEach(function (filtrado) {
       let tituloValue  = filtrado.querySelector(".tituloArticulo").innerHTML.toLowerCase();
       if (tituloValue.includes(inputValue)) {
-        filtrado.style.display = "block";
+        filtrado.style.display = "flex";
       } else {
         filtrado.style.display = "none";
       }
