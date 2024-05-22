@@ -3,8 +3,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require('conn.php');
+session_start();
 
+require('conn.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -21,7 +22,8 @@ if ($result && mysqli_num_rows($result) > 0) {
 
     if ($password === $stored_password) {
 
-        header("Location: ./.insertBD.php");
+        $_SESSION['username'] = $username;
+        header("Location: dashboard.php");
         exit();
     } else {
         echo "Contraseña incorrecta";
@@ -32,4 +34,3 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 mysqli_close($con);
 ?>
-
