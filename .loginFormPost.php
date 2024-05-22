@@ -20,7 +20,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     if (password_verify($password, $stored_password_hash)) {
         echo "Inicio de sesión exitoso";
     } else {
-        echo "Nombre de usuario o contraseña incorrectos";
+        echo "contraseña incorrectos";
     }
 } else {
     echo "Nombre de usuario o contraseña incorrectos";
