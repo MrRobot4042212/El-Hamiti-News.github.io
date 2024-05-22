@@ -6,22 +6,25 @@ error_reporting(E_ALL);
 require('./conn.php');
 session_start();
 
-// Verificar si el usuario está logueado
+
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
 
-// Obtener el próximo ID disponible
-$sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'elhamiti_news' AND TABLE_NAME = 'Noticias'";
-$result = $con->query($sql);
 
-$next_id = 1; // Valor predeterminado en caso de que la consulta falle
-if ($result && $row = $result->fetch_assoc()) {
-    $next_id = $row['AUTO_INCREMENT'];
+$query = "SELECT MAX(ID_noticia) AS maximo FROM Noticias";
+
+$result = $mysqli->query($query);
+
+if ($result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    $next_id = $row["maximo"] + 1;
+} else {
+    $next_id = 1;
 }
 
-$con->close(); // Usar $con para cerrar la conexión
+$con->close(); 
 
 ?>
 
@@ -36,7 +39,7 @@ $con->close(); // Usar $con para cerrar la conexión
 </head>
 <body>
     <section class="verificacion">
-        <h1 color="white" class="row1" >Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+        <h1 class="row1" >Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo"></a>
         <h1 class="textRedactores">Redacción de noticias</h1>
         <form action="./.insertBDPost.php" method="POST">
