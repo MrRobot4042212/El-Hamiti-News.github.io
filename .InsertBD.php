@@ -15,7 +15,7 @@ if (!isset($_SESSION['username'])) {
 
 $query = "SELECT MAX(ID_noticia) AS maximo FROM Noticias";
 
-$result = $mysqli->query($query);
+$result = $con->query($query);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
