@@ -39,7 +39,7 @@ $con->close(); // Usar $con para cerrar la conexión
         <h1 class="row1">Buenos días, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo"></a>
         <h1 class="textRedactores">Redacción de noticias</h1>
-        <form action="insertBDPost.php" method="POST">
+        <form action="./.insertBDPost.php" method="POST">
 
             <label for="id_noticia">Nº de la noticia:</label><br>
             <input type="number" name="id_noticia" value="<?php echo $next_id; ?>" required disabled><br><br>
