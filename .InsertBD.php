@@ -1,29 +1,28 @@
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-
 require('./conn.php');
 session_start();
-
-// Obtener el próximo ID disponible
-$sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '$dbname' AND TABLE_NAME = 'Noticias'";
-$result = $conn->query($sql);
-
-$next_id = 1; // Valor predeterminado en caso de que la consulta falle
-if ($result && $row = $result->fetch_assoc()) {
-    $next_id = $row['AUTO_INCREMENT'];
-}
-
-$conn->close();
 
 // Verificar si el usuario está logueado
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
+
+// Obtener el próximo ID disponible
+$sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = 'elhamiti_news' AND TABLE_NAME = 'Noticias'";
+$result = $con->query($sql);
+
+$next_id = 1; // Valor predeterminado en caso de que la consulta falle
+if ($result && $row = $result->fetch_assoc()) {
+    $next_id = $row['AUTO_INCREMENT'];
+}
+
+$con->close(); // Usar $con para cerrar la conexión
+
 ?>
 
 <!DOCTYPE html>
