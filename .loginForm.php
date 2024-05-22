@@ -16,6 +16,12 @@
             <input type="text" id="username" name="username" required><br><br>
             <label for="password">Contraseña:</label><br>
             <input type="password" id="password" name="password" required><br><br>
+            <label for="host">Host:</label><br>
+                <select name="host" id="host">
+                    <option value="localhost">localhost</option>
+                    <option value="dmz.elhamiti.local">dmz.elhamiti.local</option>
+                    <option value="10.5.2.8">10.5.2.8</option>
+                </select><br><br>
             <input type="submit" value="Iniciar sesión">
         </form>
     </section> 

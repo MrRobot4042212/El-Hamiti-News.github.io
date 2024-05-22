@@ -6,18 +6,31 @@ error_reporting(E_ALL);
 require('conn.php');
 $user = $_POST['username'];
 $pass = $_POST['password'];
+$host = $_POST['host'];
 
-$sql = "SELECT user, host FROM mysql.user WHERE user = '$user' AND authentication_string = '$pass'";
+$hashed_password = hash('sha256', $pass);
+
+$sql = "SELECT user, host, authentication_string FROM mysql.user WHERE user = '$user' AND host = '$host'";
 $result = mysqli_query($con, $sql);
 
 if ($result === false) {
     echo "Error en la consulta: " . mysqli_error($con);
 } else {
+
     if (mysqli_num_rows($result) > 0) {
-        header("Location: ./.insertDB.php");
-        exit();
+
+        $row = mysqli_fetch_assoc($result);
+        $stored_password_hash = $row['authentication_string'];
+        
+
+        if (hash_equals($stored_password_hash, $hashed_password)) {
+            header("Location: ./.insertDB.php");
+            exit(); 
+        } else {
+            echo "Nombre de usuario, contraseña o host incorrectos";
+        }
     } else {
-        echo "Nombre de usuario o contraseña incorrectos";
+        echo "Nombre de usuario, contraseña o host incorrectos";
     }
 }
 
