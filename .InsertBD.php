@@ -14,7 +14,7 @@ if (!isset($_SESSION['username'])) {
 
 
 $query = "SELECT MAX(ID_noticia) AS maximo FROM Noticias";
-$query2 = "SELECT ID_seccion, Seccion_noticia, Seccion_noticia_en FROM tu_tabla";
+$query2 = "SELECT ID_seccion, Seccion_noticia, Seccion_noticia_en FROM Secciones";
 
 $result = $con->query($query);
 $result2 = $con->query($query2);
