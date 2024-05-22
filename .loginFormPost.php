@@ -5,6 +5,7 @@ error_reporting(E_ALL);
 
 require('conn.php');
 
+
 $username = $_POST['username'];
 $password = $_POST['password'];
 
@@ -19,8 +20,9 @@ if ($result && mysqli_num_rows($result) > 0) {
     $stored_password = $row['password'];
 
     if ($password === $stored_password) {
-        header('./.insertDB.php');
-  
+
+        header("Location: ./.insertBD.php");
+        exit();
     } else {
         echo "Contraseña incorrecta";
     }
@@ -30,3 +32,4 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 mysqli_close($con);
 ?>
+
