@@ -66,7 +66,7 @@ $con->close();
             <input type="number" name="id_seccion" required><br><br>
             
             <label for="urlImg">URL de la imagen:</label><br>
-            <input type="text" name="urlImg" placeholder="./data/img/noticas/-archivo-"><br><br>
+            <input type="text" name="urlImg" placeholder="./data/img/noticas/_NºdelaNoticia.Formato"><br><br>
             <input type="submit" value="Publicar">
         </form>
 
