@@ -19,7 +19,7 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-    <h1>Buenos dias, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
+    <h1>Buenos dias, <?php echo ($_SESSION['username']); ?>!</h1>
     <section class="verificacion">
         <a class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
         <h1 class="textRedactores">Redaccion de noticias</h1>
