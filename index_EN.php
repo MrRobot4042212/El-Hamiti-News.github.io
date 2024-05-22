@@ -72,7 +72,7 @@
                 echo '<article class="articulo tipo .'.$row['ID_noticia'].'">';
                 echo '<div>';
                 echo '<h1 class="tituloArticulo">' . $row['Titulo_noticia_en'] .'</h1>';
-                echo '<h5 class="subtitulo">' . $row['Seccion_noticia_en']. " " . $row['Fecha_noticia']  . '</h5>';
+                echo '<h5 class="subtitulo">' . $row['Seccion_noticia_en'] . " - " . $row['Fecha_noticia']  . '</h5>';
                 echo '<p class="contenidoArticulo">' . $row['Contenido_noticia_en'] .  '</p>';
                 echo '</div>';
                 echo '</article>';
