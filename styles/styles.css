@@ -642,6 +642,17 @@ max-height: 30px;
     align-items: center;
 }
 
+.verificacion form{
+    display: flex;
+
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .verificacion label {
     color: white;
     text-align: center;
@@ -651,7 +662,11 @@ max-height: 30px;
 .verificacion input{
     color: black;
     font-family: 'montserrat';
-
+    width: 200px;
+}
+.verificacion textarea{
+    color: black;
+    font-family: 'montserrat';
 }
 
 .textRedactores{
