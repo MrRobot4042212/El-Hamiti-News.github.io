@@ -2,6 +2,16 @@
 require('./conn.php');
 session_start();
 
+$sql = "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_SCHEMA = '$dbname' AND TABLE_NAME = 'Noticias'";
+$result = $conn->query($sql);
+
+$next_id = 1;
+if ($result && $row = $result->fetch_assoc()) {
+    $next_id = $row['AUTO_INCREMENT'];
+}
+
+$conn->close();
+
 if (!isset($_SESSION['username'])) {
 
     header("Location: login.php");
@@ -23,16 +33,16 @@ if (!isset($_SESSION['username'])) {
     <h1 class="row1">Buenos dias, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <a class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
         <h1 class="textRedactores">Redaccion de noticias</h1>
+        <form action="insertBDPost.php" method="POST">
 
-        <form action="./.insertBDPost.php">
             <label for="id_noticia">Nº de la noticia:</label><br>
-            <input type="number" name="id_noticia" required disabled><br><br>
+            <input type="number" name="id_noticia" value="<?php echo $next_id; ?>" required disabled><br><br>
 
             <label for="titulo_noticia_es">Titulo de la noticia (ES):</label><br>
             <input type="text" name="titulo_noticia_es" required><br><br>
 
-            <label for="titulo_noticia_en">Titulo de la noticia (EN): </label><br>
-            <input type="te" name="titulo_noticia_en" required><br><br>
+            <label for="titulo_noticia_en">Titulo de la noticia (EN):</label><br>
+            <input type="text" name="titulo_noticia_en" required><br><br>
 
             <label for="fecha_noticia">Fecha de la noticia:</label><br>
             <input type="date" name="fecha_noticia" required><br><br>
@@ -44,13 +54,13 @@ if (!isset($_SESSION['username'])) {
             <textarea id="contenido_noticia_en" name="contenido_noticia_en" rows="4" cols="50" style="height: 100px;"></textarea><br><br>
             
             <label for="id_seccion">Nº de la seccion</label><br>
-            <input type="number" name="id_seccion" required disabled><br><br>
+            <input type="number" name="id_seccion" required><br><br>
             
             <label for="urlImg">Url de la imagen</label><br>
             <input type="text" name="urlImg" placeholder="./data/img/noticas/-archivo-"><br><br>
-
-            <input class="textButton" type="submit" value="Publicar">
+            <input type="submit" value="Publicar">
         </form>
+
         <a class="textButton" href="logout.php">Cerrar sesión</a>
     </section>
 </body>
