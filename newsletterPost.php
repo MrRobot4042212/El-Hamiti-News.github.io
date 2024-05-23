@@ -7,7 +7,7 @@ require_once('./PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
+$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
 
 $mail->SMTPOptions = array(
     'ssl' => array(
