@@ -1,4 +1,3 @@
-<?php
 /**
  * PHPMailer SPL autoloader.
  * PHP Version 5
