@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Body = $msg;
 
             if ($mail->Send()) {
-                header ('Location: ./aboutUS.php');
+                header ('Location: ./aboutUs.php');
             } else {
                 throw new Exception("Error al enviar el correo: " . $mail->ErrorInfo);
             }
