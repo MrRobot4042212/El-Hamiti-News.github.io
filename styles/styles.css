@@ -171,13 +171,26 @@ nav ul li a:hover{
     align-items: center;
     text-align: center;
     width: 50px;
-    background-color: rgb(59, 117, 127,0.5);
+    background-color: rgb(59, 117, 127);
     padding: 0px 35px;
     position: absolute;
+    z-index: 10;
 
 }
 .hidden{
     display: none;
+}
+
+.contenedorIdiomasv2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50px;
+    background-color: rgb(59, 117, 127);
+    padding: 0px 35px;
+    z-index: 10;
 }
 
 .contenedorIdiomas *{
@@ -196,8 +209,9 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgb(59, 117, 127,0.5);
+    background-color: rgb(59, 117, 127);
     position: absolute;
+    z-index: 10;
 
 }
 

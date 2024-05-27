@@ -34,7 +34,7 @@ if ($lang == 'en') {
         <h1>Bienvenido al noticiero "El Hamiti News"</h1>
         <h2>Por favor seleccione su idioma</h2>
         <section>
-            <ul class="contenedorIdiomas listaHorizontal">
+            <ul class="contenedorIdiomasv2 listaHorizontal">
               <li>
                     <form action="" method="get">
                     <input type="hidden" name="lang" value="es">
