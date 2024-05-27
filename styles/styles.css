@@ -160,6 +160,9 @@ nav ul li a:hover{
     position: relative;
     cursor: pointer;
 }
+.desgloseIdiomas{
+    position: relative;
+}
 
 .contenedorIdiomas{
     display: flex;
@@ -170,6 +173,7 @@ nav ul li a:hover{
     width: 50px;
     background-color: rgb(59, 117, 127,0.5);
     padding: 0px 35px;
+    position: absolute;
 
 }
 .hidden{
@@ -193,6 +197,7 @@ nav ul li a:hover{
     align-items: center;
     text-align: center;
     background-color: rgb(59, 117, 127,0.5);
+    position: absolute;
 
 }
 
