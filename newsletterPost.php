@@ -7,7 +7,7 @@ require_once('./PHPMailerAutoload.php');
 
 $mail = new PHPMailer;
 
-//$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
+$mail->SMTPDebug = 3; // Descomentar esta línea para habilitar la depuración
 
 $mail->SMTPOptions = array(
     'ssl' => array(
@@ -18,7 +18,7 @@ $mail->SMTPOptions = array(
 );
 
 $mail->Host = 'email.server.elhamiti.local'; // Servidor SMTP
-$mail->SMTPSecure = 'tls'; // Protocolo SSL o TLS
+$mail->SMTPSecure = 'TLS'; // Protocolo SSL o TLS
 $mail->Port = 587; // Puerto de conexión al servidor SMTP
 $mail->SMTPAuth = true; // Para habilitar o deshabilitar la autenticación
 $mail->Username = 'admin@server.elhamiti.local'; // Usuario, normalmente el correo electrónico
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->Body = $msg;
 
             if ($mail->Send()) {
-                echo "Se ha realizado el envío";
+                header ('Location: ./aboutUs.php');
             } else {
                 throw new Exception("Error al enviar el correo: " . $mail->ErrorInfo);
             }
