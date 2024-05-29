@@ -13,7 +13,7 @@ Tiene como objetivo el diseño, desarrollo e implementación de una plataforma d
 
  ### Servicios internos
 
-    Servidor de Directorio Activo con OpenLDAP y               LDAP-Account-Manager (LAM) 
+    Servidor de Directorio Activo con OpenLDAP y    LDAP-Account-Manager (LAM) 
 
     Servidor DNS con Bind9 
 
