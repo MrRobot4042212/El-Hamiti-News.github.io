@@ -663,12 +663,19 @@ max-height: 30px;
 
 .verificacion form{
     display: flex;
-
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+    row-gap: 10px;
+}
+.row1{
+    color: white;
+    text-align: center;
+    font-family: 'montserrat';
+    font-size: 40px;
+    font-style:italic ;
 }
 
 
