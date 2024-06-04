@@ -5,7 +5,7 @@
                   <li>
                     <form action="./index.php" method="get">
                           <input type="hidden" name="lang" value="es">
-                          <button class="textButton" type="submit">Pagina principal</button>
+                          <button class="textButton" type="submit">Página principal</button>
                     </form>
                 </li>
             <li><a class="optLink" href="./aboutUs.php">Sobre nosotros</a></li>
@@ -40,10 +40,9 @@
                 <h1>Equipo</h1>
                 <p>
                     Nuestra empresa esta formada por diferentes departamentos: <br>
-                    - Departamento de redes y servicios: Antonio Perales, Felipe Gimenez, Josias Gonzalez y Alfonso Chicoma <br>
+                    - Departamento de redes y servicios: Antonio Perales, Felipe Giménez, Josías González y Alfonso Chicoma <br>
                     - Departamento Web: Alfonso Chicoma<br>
-                    - Departamento Marketing: Ismael El hamiti<br>
-                    - Departamento Comercial: Felipe Gimenez <br>
+                    - CEO: Ismael El Hamiti<br>
                 </p>
                 <div class="imgEquipo">
                     <div class="carta">
@@ -52,11 +51,11 @@
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/Felipe.png">
-                        <p>Felipe Gimenez</p>
+                        <p>Felipe Giménez</p>
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/Josias_2.png">
-                        <p>Josias Gonzalez</p>
+                        <p>Josías González</p>
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/alfonso.png">

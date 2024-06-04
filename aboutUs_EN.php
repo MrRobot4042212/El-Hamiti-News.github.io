@@ -40,9 +40,9 @@
                 <h1>Team</h1>
                 <p>
                     Our company is composed of different departments: <br>
-                    - Networks Department & services: Antonio Perales, Felipe Gimenez, Josias  Gonzalez, and Alfonso Chicoma <br>
+                    - Networks Department & services: Antonio Perales, Felipe Giménez, Josías  González, and Alfonso Chicoma <br>
                     - Web development: Alfonso Chicoma <br>
-                    - Marketing Department: Ismael El Hamiti <br>
+                    - CEO: Ismael El Hamiti <br>
                 </p>
                 <div class="imgEquipo">
                     <div class="carta">
@@ -51,11 +51,11 @@
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/Felipe.png">
-                        <p>Felipe Gimenez</p>
+                        <p>Felipe Giménez</p>
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/Josias_2.png">
-                        <p>Josias Gonzalez</p>
+                        <p>Josias González</p>
                     </div>
                     <div class="carta">
                         <img src="./data/img/equipo/alfonso.png">
@@ -79,7 +79,7 @@
                 <div class="contenedorNewsletter">
                     <h2>Suscribe to our newsletter</h2>
                     <form class="formMail" action="./newsletterPost.php" method="post">
-                        <input type="text" name="email" id="inputCorreo" placeholder="Introduzca su correo">
+                        <input type="text" name="email" id="inputCorreo" placeholder="Introduce your email">
                         <button type="submit">Join!</button>
                     </form>
                 </div>
