@@ -39,10 +39,10 @@ inputFiltroGenero.forEach(function (inputGen) {
         articuloGenero = articuloGenero.innerHTML;
         let belongsToGenre = articuloGenero.includes(inputGenValue);
         let recordatorioFiltro = document.getElementById('seleccionFiltro');
-        if (window.location.search.includes('lang=ES')) {
+        if (window.location.search.includes('lang=es')) {
         recordatorioFiltro.innerHTML = "Ha filtrado por: " + inputGenValue;  
         }
-        else if (window.location.search.includes('lang=EN')) {
+        else if (window.location.search.includes('lang=en')) {
           recordatorioFiltro.innerHTML = "You filtered by: " + inputGenValue;  
         }
         if (belongsToGenre) {
