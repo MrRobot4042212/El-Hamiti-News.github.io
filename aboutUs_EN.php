@@ -79,7 +79,7 @@
                 <div class="contenedorNewsletter">
                     <h2>Suscribe to our newsletter</h2>
                     <form class="formMail" action="./newsletterPost.php" method="post">
-                        <input type="text" name="email" id="inputCorreo" placeholder="Introduce your email">
+                        <input type="text" name="email" id="inputCorreo" placeholder="Submit your email">
                         <button type="submit">Join!</button>
                     </form>
                 </div>
