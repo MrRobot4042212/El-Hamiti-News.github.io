@@ -36,6 +36,7 @@
 <body>
     <div class="container">
         <h1>404</h1>
+        <img src="./data/img/logo_llorando.png" alt="">
         <p>Lo sentimos, la página que buscas no se encuentra disponible.</p>
         <p><a href="/">Volver a la página principal</a></p>
     </div>
