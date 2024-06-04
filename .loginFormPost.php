@@ -26,9 +26,11 @@ if ($result && mysqli_num_rows($result) > 0) {
         header("Location: ./.InsertBD.php");
         exit();
     } else {
+        header("Location: ./404.php");
         echo "Contraseña incorrecta";
     }
 } else {
+    header("Location: ./404.php");
     echo "Nombre de usuario incorrecto";
 }
 

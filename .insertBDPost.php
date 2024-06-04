@@ -27,7 +27,8 @@ $urlImg = $_POST['urlImg'];
 
 $stmt = $con->prepare("INSERT INTO Noticias (ID_noticia, Titulo_noticia, Titulo_noticia_en, Fecha_noticia, Contenido_noticia, Contenido_noticia_en, ID_seccion, urlImg) VALUES (?, ?, ?, ?, ?, ?, ?, ?)");
 if ($stmt === false) {
-    die("Error en la preparación de la declaración: " . $con->error);
+    header("Location: ./404.php");
+    
 }
 $stmt->bind_param("isssssis", $next_id, $titulo_noticia_es, $titulo_noticia_en, $fecha_noticia, $contenido_noticia_es, $contenido_noticia_en, $id_seccion, $urlImg);
 
@@ -36,6 +37,7 @@ if ($stmt->execute()) {
     header("Location: ./.InsertBD.php");
 } else {
     echo "Error: " . $stmt->error;
+    header("Location: ./404.php");
 }
 
 $stmt->close();
