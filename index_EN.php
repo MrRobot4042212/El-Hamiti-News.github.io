@@ -16,7 +16,7 @@
         <a href="./index.php" class="logo"><img src="./data/img/logo.png" alt="company logo" ></a>
         <nav>
             <ul class="url">
-            <li><input type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Search the article tittle"></li>
+            <li><input type="text" id="busqueda1" class="inputTitulo busqueda" placeholder="Search the article title"></li>
             <li><a class="optLink" href="./index.php">Main Page</a></li>
                 <li><a class="optLink" href="./aboutUs.php">About Us</a></li>
                 <li class="desgloseIdiomas"><a class="idiomas">
