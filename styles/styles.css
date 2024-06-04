@@ -590,10 +590,9 @@ aside ul li a:hover{
 
 footer{
         grid-area: 5 / 1 / 6 / 8;
-        position: relative;
+        position: fixed;
         left: 0;
         bottom: 0;
-        top: 0;
         bottom: 12px;
         display: flex;
         flex-direction: row;
