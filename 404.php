@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error 404 - Página no encontrada</title>
+    <title>404 Página no encontrada</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,8 +37,9 @@
     <div class="container">
         <h1>404</h1>
         <img src="./data/img/logo_llorando.png" alt="">
+        <h2>Ai....Algo malo pasó</h2>
         <p>Lo sentimos, la página que buscas no se encuentra disponible.</p>
-        <p><a href="/">Volver a la página principal</a></p>
+        <p><a href="/.loginForm.php">Volver a la página principal</a></p>
     </div>
 </body>
 </html>
