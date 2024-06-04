@@ -243,7 +243,9 @@ nav ul li a:hover{
 a{
     text-decoration: none;
 }
-
+.contenedorModosVision li:hover{
+    animation: llenar 1s linear forwards;
+}
 .lenguaje{
     grid-area: 1 / 1 / 6 / 8 ;
     display: flex;
