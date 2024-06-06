@@ -362,7 +362,9 @@ aside ul li{
 
 .genero{
     cursor: pointer;
+    animation: none;
 }
+
 aside ul li a{
     text-decoration: none;
     color: white;
