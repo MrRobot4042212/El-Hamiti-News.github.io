@@ -867,3 +867,6 @@ max-height: 30px;
     margin-inline-end: 0px;
     padding-inline-start: 0;
    }
+   #seccionFiltro{
+    width: 100%;
+   }
