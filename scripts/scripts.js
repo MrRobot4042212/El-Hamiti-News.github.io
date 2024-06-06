@@ -48,7 +48,7 @@ inputFiltroGenero.forEach(function (inputGen) {
         if (belongsToGenre) {
           filtradoGen.style.display = "flex";
         }
-        else if (inputGenValue === "Todos" || inputGenValue === "All"){
+        if (inputGenValue === "Todos" || inputGenValue === "All"){
           filtradoGen.style.display = "flex";
           recordatorioFiltro.innerHTML ="";
         }
@@ -166,6 +166,7 @@ selectModo.addEventListener('click', function(){
         let generosContainer = document.getElementById('generos');
         let stopColor1 = document.getElementById('stopColor1');
         let stopColor2 = document.getElementById('stopColor2');
+        let colorMenu = document.getElementById('menu');
       
 
         if (seleccion.classList.contains('darkMode')) {
@@ -185,6 +186,8 @@ selectModo.addEventListener('click', function(){
           generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
           stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
           stopColor2.style.stopColor="rgb(59, 117, 127,1)"
+          colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
+
 
   
 
@@ -201,6 +204,8 @@ selectModo.addEventListener('click', function(){
             generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
             stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
             stopColor2.style.stopColor="rgb(59, 117, 127,1)"
+            colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
+
 
 
         } else if (seleccion.classList.contains('readMode')) {
@@ -220,6 +225,7 @@ selectModo.addEventListener('click', function(){
           generosContainer.style.backgroundColor="#73422d"
           stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
           stopColor2.style.stopColor="rgb(140, 81, 49)"
+          colorMenu.style.backgroundColor="#1a2c32"
 
 
         } else {
