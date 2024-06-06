@@ -121,6 +121,21 @@ window.addEventListener('scroll', function() {
   }
 });
 
+function ocultarFooterAlFinal() {
+  let scrollTotal = document.documentElement.scrollHeight;
+  let scrollActual = window.scrollY + window.innerHeight;
+
+  if (scrollActual >= scrollTotal) {
+    footerMain.style.display = "none";
+  } else {
+    footerMain.style.display = "flex";
+  }
+}
+
+window.addEventListener('scroll', ocultarFooterAlFinal);
+
+window.addEventListener('load', ocultarFooterAlFinal);
+
 let selectIdioma = document.querySelector('.idiomas');
 
 selectIdioma.addEventListener('click', function(){
