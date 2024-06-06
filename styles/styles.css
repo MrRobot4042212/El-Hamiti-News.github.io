@@ -866,7 +866,6 @@ max-height: 30px;
     transform-origin: 0% 0%;
     transform: translate(-110%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    border: 1px rgb(128, 128, 128,0.6) solid;
     top: 0;
     position: absolute;
    }
