@@ -167,6 +167,7 @@ selectModo.addEventListener('click', function(){
         let stopColor1 = document.getElementById('stopColor1');
         let stopColor2 = document.getElementById('stopColor2');
         let colorMenu = document.getElementById('menu');
+        let backgroundGeneros = document.getElementById('barraGeneros');
       
 
         if (seleccion.classList.contains('darkMode')) {
@@ -187,6 +188,7 @@ selectModo.addEventListener('click', function(){
           stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
           stopColor2.style.stopColor="rgb(59, 117, 127,1)"
           colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
+          backgroundGeneros.style.backgroundColor="none"
 
 
   
@@ -205,6 +207,8 @@ selectModo.addEventListener('click', function(){
             stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
             stopColor2.style.stopColor="rgb(59, 117, 127,1)"
             colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
+            backgroundGeneros.style.backgroundColor="none"
+
 
 
 
@@ -226,6 +230,8 @@ selectModo.addEventListener('click', function(){
           stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
           stopColor2.style.stopColor="rgb(140, 81, 49)"
           colorMenu.style.backgroundColor="#73422d"
+          backgroundGeneros.style.backgroundColor="none"
+
 
 
         } else {
