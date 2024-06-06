@@ -73,9 +73,9 @@
                         ?>
                       </ul>
                   </div>
+                  <p id="seleccionFiltro"></p>
                 </nav>
             </ul>
-            <p id="seleccionFiltro"></p>
         </aside>
 
         <div class="contenedorNoticias">

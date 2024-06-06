@@ -320,7 +320,6 @@ main{
 main aside{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgba(95, 170, 177, 1);
     position: sticky;
     top: 0;
     z-index: 5;
@@ -378,10 +377,7 @@ aside ul li a:hover{
     font-size: 15px;
 }
 
-.scrolled{
-    visibility: hidden;
-    background-color:rgb(95, 170, 177);
-}
+
 
 
 
@@ -847,7 +843,7 @@ max-height: 30px;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
+    transform: translate(-110%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     border: 1px rgb(128, 128, 128,0.6) solid;
     top: 0;
