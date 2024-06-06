@@ -48,7 +48,7 @@ inputFiltroGenero.forEach(function (inputGen) {
         if (belongsToGenre) {
           filtradoGen.style.display = "flex";
         }
-        if (inputGenValue === "Todos" || inputGenValue === "All"){
+        else if (inputGenValue === "Todos" || inputGenValue === "All"){
           filtradoGen.style.display = "flex";
           recordatorioFiltro.innerHTML ="";
         }
