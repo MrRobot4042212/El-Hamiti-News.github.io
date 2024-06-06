@@ -365,6 +365,10 @@ aside ul li{
     animation: none;
 }
 
+.genero:hover{
+    animation: none;
+}
+
 aside ul li a{
     text-decoration: none;
     color: white;
