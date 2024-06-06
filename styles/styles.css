@@ -210,6 +210,11 @@ nav ul li a:hover{
 
 .modosVision{
     cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contenedorModosVision{
