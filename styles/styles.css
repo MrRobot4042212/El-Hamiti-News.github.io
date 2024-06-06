@@ -586,11 +586,9 @@ aside ul li a:hover{
     padding: 20px;
 }
 
-
-
 footer{
         grid-area: 5 / 1 / 6 / 8;
-        position: fixed;
+        position: relative;
         left: 0;
         bottom: 0;
         bottom: 12px;
