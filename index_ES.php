@@ -71,9 +71,9 @@
                             echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
                         }
                         ?>
+                        <p id="seleccionFiltro"></p>
                       </ul>
                   </div>
-                  <p id="seleccionFiltro"></p>
                 </nav>
             </ul>
         </aside>

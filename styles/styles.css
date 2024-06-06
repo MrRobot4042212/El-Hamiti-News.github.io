@@ -838,7 +838,6 @@ max-height: 30px;
     flex-direction: row;
     width: 100%;
     background: rgb(95, 170, 177);
-    backdrop-filter: blur(10px);
     border-radius: 8px;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
