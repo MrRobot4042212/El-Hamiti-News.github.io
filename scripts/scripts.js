@@ -184,11 +184,14 @@ selectModo.addEventListener('click', function(){
             elementInput = elementInput.style.color="black"
 
           });
-          generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
+          generosContainer.style.backgroundColor="transparent"
           stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
           stopColor2.style.stopColor="rgb(59, 117, 127,1)"
           colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
-          backgroundGeneros.style.backgroundColor="none"
+          backgroundGeneros.style.backgroundColor="transparent"
+          for (let child of generosContainer){
+            child.style.backgroundColor="transparent"
+          }
 
 
   
@@ -203,11 +206,14 @@ selectModo.addEventListener('click', function(){
             link.style.color = "#1a2c32";
           }
 
-            generosContainer.style.backgroundColor="rgba(95, 170, 177, 1)"
+            generosContainer.style.backgroundColor="transparent"
             stopColor1.style.stopColor="rgb(59, 117, 127,0.3)"
             stopColor2.style.stopColor="rgb(59, 117, 127,1)"
             colorMenu.style.backgroundColor="rgba(95, 170, 177, 1)"
-            backgroundGeneros.style.backgroundColor="none"
+            backgroundGeneros.style.backgroundColor="transparent"
+            for (let child of generosContainer){
+              child.style.backgroundColor="transparent"
+            }
 
 
 
@@ -226,11 +232,14 @@ selectModo.addEventListener('click', function(){
 
           });
           
-          generosContainer.style.backgroundColor="#73422d"
+          generosContainer.style.backgroundColor="transparent"
           stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
           stopColor2.style.stopColor="rgb(140, 81, 49)"
           colorMenu.style.backgroundColor="#73422d"
-          backgroundGeneros.style.backgroundColor="none"
+          backgroundGeneros.style.backgroundColor="transparent"
+          for (let child of generosContainer){
+            child.style.backgroundColor="transparent"
+          }
 
 
 
