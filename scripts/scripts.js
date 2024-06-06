@@ -225,7 +225,7 @@ selectModo.addEventListener('click', function(){
           generosContainer.style.backgroundColor="#73422d"
           stopColor1.style.stopColor="rgb(226, 209, 165,0.1)"
           stopColor2.style.stopColor="rgb(140, 81, 49)"
-          colorMenu.style.backgroundColor="#1a2c32"
+          colorMenu.style.backgroundColor="#73422d"
 
 
         } else {
