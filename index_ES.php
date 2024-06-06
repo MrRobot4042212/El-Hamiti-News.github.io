@@ -58,11 +58,22 @@
     <main>
         <aside id="generos" class="generos">
             <ul id="barraGeneros">
-                <?php
-                while($row2 = $result2 -> fetch_assoc()){
-                    echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
-                }
-                ?>
+              <nav class="navHamburger" role="navigation">
+                  <div id="menuToggle">
+                      <input type="checkbox" />
+                      <span></span>
+                      <span></span>
+                      <span></span>
+    
+                      <ul id="menu">
+                      <?php
+                        while($row2 = $result2 -> fetch_assoc()){
+                            echo  "<li><a class='genero'>".$row2['Seccion_noticia']."</a></li>";
+                        }
+                        ?>
+                      </ul>
+                  </div>
+                </nav>
             </ul>
             <p id="seleccionFiltro"></p>
         </aside>
