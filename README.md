@@ -31,5 +31,9 @@ Tiene como objetivo el diseño, desarrollo e implementación de una plataforma d
 
     Servidor SIEM con Suricata y Elastic Stack. 
 
-    Servidor de Logs con Rsyslog.   
+    Servidor de Logs con Rsyslog.
+
+    #Anexos
+
     
+    [Grupo05_Memoria_ElHamitiNews.pdf](https://github.com/user-attachments/files/15776237/Grupo05_Memoria_ElHamitiNews.pdf)
